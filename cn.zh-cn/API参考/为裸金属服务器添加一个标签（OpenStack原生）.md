@@ -13,8 +13,8 @@
 -   tag不能以点“.”开头。
 -   不支持创建空tag（空串）。
 
->![](public_sys-resources/icon-note.gif) **说明：**   
->建议为裸金属服务器添加“\_\_type\_baremetal”标签，标识是一台裸金属服务器。  
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>建议为裸金属服务器添加“\_\_type\_baremetal”标签，标识是一台裸金属服务器。
 
 ## URI<a name="section1885963111321"></a>
 

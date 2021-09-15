@@ -6,7 +6,7 @@
 
 ## URI<a name="section46630661"></a>
 
-GET /v2.1/\{project\_id\}/flavors/\{flavors\_id\}
+GET /v2.1/\{project\_id\}/flavors/\{flavor\_id\}
 
 参数说明请参见[表1](#table1857156445)。
 
@@ -29,7 +29,7 @@ GET /v2.1/\{project\_id\}/flavors/\{flavors\_id\}
 <p id="p652825144113"><a name="p652825144113"></a><a name="p652825144113"></a>获取方式请参见<a href="获取项目ID.md">获取项目ID</a>。</p>
 </td>
 </tr>
-<tr id="row98691534416"><td class="cellrowborder" valign="top" width="23.792379237923793%" headers="mcps1.2.4.1.1 "><p id="p18974100"><a name="p18974100"></a><a name="p18974100"></a>flavors_id</p>
+<tr id="row98691534416"><td class="cellrowborder" valign="top" width="23.792379237923793%" headers="mcps1.2.4.1.1 "><p id="p18974100"><a name="p18974100"></a><a name="p18974100"></a>flavor_id</p>
 </td>
 <td class="cellrowborder" valign="top" width="24.892489248924893%" headers="mcps1.2.4.1.2 "><p id="p60507121"><a name="p60507121"></a><a name="p60507121"></a>是</p>
 </td>

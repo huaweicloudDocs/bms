@@ -6,7 +6,7 @@
 
 ## URI<a name="section116617920169"></a>
 
-GET /v2.1/\{project\_id\}/flavors/\{flavors\_id\}/os-extra\_specs
+GET /v2.1/\{project\_id\}/flavors/\{flavor\_id\}/os-extra\_specs
 
 参数说明请参见[表1](#table955744812451)。
 
@@ -29,7 +29,7 @@ GET /v2.1/\{project\_id\}/flavors/\{flavors\_id\}/os-extra\_specs
 <p id="p652825144113"><a name="p652825144113"></a><a name="p652825144113"></a>获取方式请参见<a href="获取项目ID.md">获取项目ID</a>。</p>
 </td>
 </tr>
-<tr id="row255944854514"><td class="cellrowborder" valign="top" width="23.232323232323232%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0057973064_p18974100"><a name="zh-cn_topic_0057973064_p18974100"></a><a name="zh-cn_topic_0057973064_p18974100"></a>flavors_id</p>
+<tr id="row255944854514"><td class="cellrowborder" valign="top" width="23.232323232323232%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0057973064_p18974100"><a name="zh-cn_topic_0057973064_p18974100"></a><a name="zh-cn_topic_0057973064_p18974100"></a>flavor_id</p>
 </td>
 <td class="cellrowborder" valign="top" width="22.732273227322732%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0057973064_p60507121"><a name="zh-cn_topic_0057973064_p60507121"></a><a name="zh-cn_topic_0057973064_p60507121"></a>是</p>
 </td>
@@ -71,7 +71,7 @@ GET /v2.1/\{project\_id\}/flavors/\{flavors\_id\}/os-extra\_specs
     <td class="cellrowborder" valign="top" width="21.95%" headers="mcps1.1.4.1.2 "><p id="zh-cn_topic_0057973064_p42695066"><a name="zh-cn_topic_0057973064_p42695066"></a><a name="zh-cn_topic_0057973064_p42695066"></a>Object</p>
     </td>
     <td class="cellrowborder" valign="top" width="56.10000000000001%" headers="mcps1.1.4.1.3 "><p id="zh-cn_topic_0057973064_p9931138"><a name="zh-cn_topic_0057973064_p9931138"></a><a name="zh-cn_topic_0057973064_p9931138"></a>描述<span id="text6300153138"><a name="text6300153138"></a><a name="text6300153138"></a>裸金属服务器</span><span id="text13005314316"><a name="text13005314316"></a><a name="text13005314316"></a></span>规格的键值对。</p>
-    <a name="ul6746628171115"></a><a name="ul6746628171115"></a><ul id="ul6746628171115"><li>capabilities:cpu_arch：<span id="text46223511313"><a name="text46223511313"></a><a name="text46223511313"></a>裸金属服务器</span><span id="text3622651316"><a name="text3622651316"></a><a name="text3622651316"></a></span>的CPU架构，取值为x86_64（适用于x86机型）或aarch64（适用于ARM机型）</li><li>baremetal:disk_detail：磁盘的描述信息。</li><li>capabilities:hypervisor_type：hypervisor类型，固定为“ironic”。</li><li>baremetal:__support_evs：是否支持云硬盘，取值为true或false。</li><li>baremetal:extBootType：表示<span id="text193781491131"><a name="text193781491131"></a><a name="text193781491131"></a>裸金属服务器</span><span id="text1037816914313"><a name="text1037816914313"></a><a name="text1037816914313"></a></span>的启动源，取值为LocalDisk（表示本地盘）或Volume（表示云硬盘，即快速发放）</li><li>baremetal:net_num：<span id="text105681112318"><a name="text105681112318"></a><a name="text105681112318"></a>裸金属服务器</span><span id="text9568811236"><a name="text9568811236"></a><a name="text9568811236"></a></span>实际可绑定的网卡数量。</li><li>baremetal:netcard_detail：网卡的描述信息。</li><li>baremetal:cpu_detail：CPU的描述信息。</li><li>resource_type：资源类型，固定为“ironic”。</li><li>baremetal:memory_detail：内存的描述信息。</li></ul>
+    <a name="ul6746628171115"></a><a name="ul6746628171115"></a><ul id="ul6746628171115"><li>capabilities:cpu_arch：<span id="text46223511313"><a name="text46223511313"></a><a name="text46223511313"></a>裸金属服务器</span><span id="text3622651316"><a name="text3622651316"></a><a name="text3622651316"></a></span>的CPU架构，取值为x86_64（适用于x86机型）或aarch64（适用于ARM机型）</li><li>baremetal:disk_detail：磁盘的描述信息。</li><li>capabilities:hypervisor_type：hypervisor类型，固定为“ironic”。</li><li>baremetal:__support_evs：是否支持云硬盘，取值为true或false。如果<span id="text188501310443"><a name="text188501310443"></a><a name="text188501310443"></a>裸金属服务器</span><span id="text15885171314412"><a name="text15885171314412"></a><a name="text15885171314412"></a></span>规格中没有此参数，表示不支持云硬盘。</li><li>baremetal:extBootType：表示<span id="text193781491131"><a name="text193781491131"></a><a name="text193781491131"></a>裸金属服务器</span><span id="text1037816914313"><a name="text1037816914313"></a><a name="text1037816914313"></a></span>的启动源，取值为LocalDisk（表示本地盘）或Volume（表示云硬盘，即快速发放）</li><li>baremetal:net_num：<span id="text105681112318"><a name="text105681112318"></a><a name="text105681112318"></a>裸金属服务器</span><span id="text9568811236"><a name="text9568811236"></a><a name="text9568811236"></a></span>实际可绑定的网卡数量。</li><li>baremetal:netcard_detail：网卡的描述信息。</li><li>baremetal:cpu_detail：CPU的描述信息。</li><li>resource_type：资源类型，固定为“ironic”。</li><li>baremetal:memory_detail：内存的描述信息。</li></ul>
     </td>
     </tr>
     </tbody>

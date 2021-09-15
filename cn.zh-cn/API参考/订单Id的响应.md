@@ -20,6 +20,14 @@
 <td class="cellrowborder" valign="top" width="56.55%" headers="mcps1.2.4.1.3 "><p id="p5458589811151"><a name="p5458589811151"></a><a name="p5458589811151"></a>提交订单成功后返回的订单ID，用户可以使用该ID对订单的处理情况进行查询（在管理控制台的“费用中心 &gt; 我的订单”页面查询）。</p>
 </td>
 </tr>
+<tr id="row114521150154614"><td class="cellrowborder" valign="top" width="19.86%" headers="mcps1.2.4.1.1 "><p id="p86106378471"><a name="p86106378471"></a><a name="p86106378471"></a>job_id</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.59%" headers="mcps1.2.4.1.2 "><p id="p186111737104717"><a name="p186111737104717"></a><a name="p186111737104717"></a>String</p>
+</td>
+<td class="cellrowborder" valign="top" width="56.55%" headers="mcps1.2.4.1.3 "><p id="p815382610134"><a name="p815382610134"></a><a name="p815382610134"></a><span>提交任务成功后返回的任务</span><span>ID</span><span>，用户可以使用该</span><span>ID</span><span>对任务执行情况进行查询。</span></p>
+<p id="p121504263132"><a name="p121504263132"></a><a name="p121504263132"></a>如何根据job_id来查询Job的执行状态，请参考<a href="查询Job状态.md">查询Job状态</a>。</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -80,7 +88,8 @@
 
     ```
     { 
-        "order_id": "CS18020810083A4GP"
+        "order_id": "CS2009141523OQSEQ",
+        "job_id": "ff808081748b760c01748b7f80370003"
     } 
     ```
 

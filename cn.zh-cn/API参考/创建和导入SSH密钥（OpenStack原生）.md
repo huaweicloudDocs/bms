@@ -38,8 +38,8 @@ POST /v2.1/\{project\_id\}/os-keypairs
 
 -   请求参数
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >创建SSH密钥时，只需要提交SSH密钥的name属性。导入SSH密钥时，才需要提交public\_key属性。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >创建SSH密钥时，只需要提交SSH密钥的name属性。导入SSH密钥时，才需要提交public\_key属性。
 
     <a name="table40018745105534"></a>
     <table><thead align="left"><tr id="row48164488105534"><th class="cellrowborder" valign="top" width="16.831683168316832%" id="mcps1.1.5.1.1"><p id="p19987085"><a name="p19987085"></a><a name="p19987085"></a>参数</p>

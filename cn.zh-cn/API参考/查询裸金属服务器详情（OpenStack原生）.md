@@ -531,18 +531,18 @@ GET /v2.1/\{project\_id\}/servers/\{server\_id\}
     </th>
     </tr>
     </thead>
-    <tbody><tr id="row57432766"><td class="cellrowborder" valign="top" width="24.587541245875414%" headers="mcps1.2.4.1.1 "><p id="p25045336115623"><a name="p25045336115623"></a><a name="p25045336115623"></a>虚拟私有云ID</p>
+    <tbody><tr id="row57432766"><td class="cellrowborder" valign="top" width="24.587541245875414%" headers="mcps1.2.4.1.1 "><p id="p25045336115623"><a name="p25045336115623"></a><a name="p25045336115623"></a>vpc_id</p>
     </td>
     <td class="cellrowborder" valign="top" width="26.23737626237376%" headers="mcps1.2.4.1.2 "><p id="p4439518115623"><a name="p4439518115623"></a><a name="p4439518115623"></a>Array of objects</p>
     </td>
-    <td class="cellrowborder" valign="top" width="49.17508249175083%" headers="mcps1.2.4.1.3 "><p id="p2639016112816"><a name="p2639016112816"></a><a name="p2639016112816"></a>名称是变量，表示<span id="text18894815596"><a name="text18894815596"></a><a name="text18894815596"></a>裸金属服务器</span><span id="text148894812598"><a name="text148894812598"></a><a name="text148894812598"></a></span>使用的虚拟私有云的ID。详情请参见<a href="#table1656029015527">表8</a>。</p>
-    <p id="p3618485912816"><a name="p3618485912816"></a><a name="p3618485912816"></a>数据结构中是该虚拟私有云下分配的私有IP地址列表。</p>
+    <td class="cellrowborder" valign="top" width="49.17508249175083%" headers="mcps1.2.4.1.3 "><p id="p34056575716"><a name="p34056575716"></a><a name="p34056575716"></a><span id="text10133109394"><a name="text10133109394"></a><a name="text10133109394"></a>裸金属服务器</span><span id="text141335013915"><a name="text141335013915"></a><a name="text141335013915"></a></span>所属网络信息。</p>
+    <a name="ul124201235982"></a><a name="ul124201235982"></a><ul id="ul124201235982"><li>key：表示<span id="text161018213914"><a name="text161018213914"></a><a name="text161018213914"></a>裸金属服务器</span><span id="text2102821398"><a name="text2102821398"></a><a name="text2102821398"></a></span>使用的虚拟私有云的ID。</li><li>value：网络详细信息，具体请参见<a href="#table1656029015527">表8</a>。</li></ul>
     </td>
     </tr>
     </tbody>
     </table>
 
-    **表 8** _虚拟私有云ID_字段数据结构说明
+    **表 8**  address字段数据结构说明
 
     <a name="table1656029015527"></a>
     <table><thead align="left"><tr id="row2645284715527"><th class="cellrowborder" valign="top" width="24.702470247024706%" id="mcps1.2.4.1.1"><p id="p1040324134912"><a name="p1040324134912"></a><a name="p1040324134912"></a>参数</p>

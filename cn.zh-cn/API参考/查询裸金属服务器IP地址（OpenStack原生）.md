@@ -91,17 +91,18 @@ GET /v2.1/\{project\_id\}/servers/\{server\_id\}/ips
     </th>
     </tr>
     </thead>
-    <tbody><tr id="row33776430143956"><td class="cellrowborder" valign="top" width="24.86%" headers="mcps1.2.4.1.1 "><p id="p51536339143956"><a name="p51536339143956"></a><a name="p51536339143956"></a><span id="text58422614477"><a name="text58422614477"></a><a name="text58422614477"></a>裸金属服务器</span><span id="text10849265476"><a name="text10849265476"></a><a name="text10849265476"></a></span>所在虚拟私有云</p>
+    <tbody><tr id="row33776430143956"><td class="cellrowborder" valign="top" width="24.86%" headers="mcps1.2.4.1.1 "><p id="p51536339143956"><a name="p51536339143956"></a><a name="p51536339143956"></a>vpc_id</p>
     </td>
     <td class="cellrowborder" valign="top" width="23.51%" headers="mcps1.2.4.1.2 "><p id="p13693953143956"><a name="p13693953143956"></a><a name="p13693953143956"></a>Array of objects</p>
     </td>
-    <td class="cellrowborder" valign="top" width="51.629999999999995%" headers="mcps1.2.4.1.3 "><p id="p54366741143956"><a name="p54366741143956"></a><a name="p54366741143956"></a><span id="text16661620184711"><a name="text16661620184711"></a><a name="text16661620184711"></a>裸金属服务器</span><span id="text066152010471"><a name="text066152010471"></a><a name="text066152010471"></a></span>所在虚拟私有云ID，格式请参见<a href="#table22651992144025">表3</a>。</p>
+    <td class="cellrowborder" valign="top" width="51.629999999999995%" headers="mcps1.2.4.1.3 "><p id="p34056575716"><a name="p34056575716"></a><a name="p34056575716"></a><span id="text10133109394"><a name="text10133109394"></a><a name="text10133109394"></a>裸金属服务器</span><span id="text141335013915"><a name="text141335013915"></a><a name="text141335013915"></a></span>所属网络信息。</p>
+    <a name="ul124201235982"></a><a name="ul124201235982"></a><ul id="ul124201235982"><li>key：表示<span id="text161018213914"><a name="text161018213914"></a><a name="text161018213914"></a>裸金属服务器</span><span id="text2102821398"><a name="text2102821398"></a><a name="text2102821398"></a></span>使用的虚拟私有云的ID。</li><li>value：网络详细信息，具体请参见<a href="#table22651992144025">表3</a>。</li></ul>
     </td>
     </tr>
     </tbody>
     </table>
 
-    **表 3**  网络参数结构说明
+    **表 3**  address参数结构说明
 
     <a name="table22651992144025"></a>
     <table><thead align="left"><tr id="row15576094144025"><th class="cellrowborder" valign="top" width="25.41%" id="mcps1.2.4.1.1"><p id="p355273111016"><a name="p355273111016"></a><a name="p355273111016"></a>参数</p>

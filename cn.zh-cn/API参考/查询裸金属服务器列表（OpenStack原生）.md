@@ -101,7 +101,7 @@ GET /v2.1/\{project\_id\}/servers\{?changes-since=\{changes-since\}&image=\{imag
     </td>
     <td class="cellrowborder" valign="top" width="41.010000000000005%" headers="mcps1.1.5.1.4 "><p id="p7441161020531"><a name="p7441161020531"></a><a name="p7441161020531"></a><span id="text4817131535"><a name="text4817131535"></a><a name="text4817131535"></a>裸金属服务器</span><span id="text1781773117312"><a name="text1781773117312"></a><a name="text1781773117312"></a></span>状态。</p>
     <p id="p117067951617"><a name="p117067951617"></a><a name="p117067951617"></a>取值范围：</p>
-    <a name="ul29109448426"></a><a name="ul29109448426"></a><ul id="ul29109448426"><li>ACTIVE：运行中/正在关机/删除中</li><li>BUILD：创建中</li><li>ERROR：故障</li><li>HARD_REBOOT：强制重启中</li><li>REBOOT：重启中</li><li>SHUTOFF：关机/正在开机/删除中/重建中/重装操作系统中/重装操作系统失败/冻结</li></ul>
+    <a name="ul29109448426"></a><a name="ul29109448426"></a><ul id="ul29109448426"><li>ACTIVE：运行中/正在关机/删除中</li><li>BUILD：创建中</li><li>ERROR：故障</li><li>HARD_REBOOT：强制重启中</li><li>REBOOT：重启中</li><li>DELETED：实例已被正常删除</li><li>SHUTOFF：关机/正在开机/删除中/重建中/重装操作系统中/重装操作系统失败/冻结</li></ul>
     </td>
     </tr>
     <tr id="row16588142145219"><td class="cellrowborder" valign="top" width="19.85%" headers="mcps1.1.5.1.1 "><p id="p1445843114279"><a name="p1445843114279"></a><a name="p1445843114279"></a>limit</p>

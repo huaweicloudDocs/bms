@@ -2,7 +2,11 @@
 
 ## 功能说明<a name="zh-cn_topic_0107606742_section1233112278019"></a>
 
-本章节介绍了“华东-上海一”、“华东-上海二”、“华北-北京一”、“华北-北京四”及“华南-广州”区域裸金属服务器操作系统监控支持的监控指标。这些区域主机监控Agent采用最新版本的Agent，监控指标更为简洁。
+本节内容介绍裸金属服务器支持上报云监控的操作系统监控指标。以下区域主机监控Agent采用最新版本的Agent，监控指标更为简洁。
+
+当前支持的区域：
+
+“华东-上海一”、“华东-上海二”、“华北-北京一”、“华北-北京四”、“华南-广州”、“华南-深圳”、“西南-贵阳一”、“中国-香港”、“亚太-曼谷”、“亚太-新加坡”、“非洲-约翰内斯堡”。
 
 >![](public_sys-resources/icon-note.gif) **说明：** 
 >安装Agent后，您便可以查看裸金属服务器的操作系统监控指标。指标采集周期是1分钟。
@@ -110,7 +114,7 @@ SERVICE.BMS
 <td class="cellrowborder" valign="top" width="13.237352529494101%" headers="mcps1.2.7.1.6 "><p id="p412417359129"><a name="p412417359129"></a><a name="p412417359129"></a>1分钟</p>
 </td>
 </tr>
-<tr id="row112410356126"><td class="cellrowborder" valign="top" width="10.347930413917217%" headers="mcps1.2.7.1.1 "><p id="p9124135141213"><a name="p9124135141213"></a><a name="p9124135141213"></a>disk_ioUtils</p>
+<tr id="row112410356126"><td class="cellrowborder" valign="top" width="10.347930413917217%" headers="mcps1.2.7.1.1 "><p id="p1581223517560"><a name="p1581223517560"></a><a name="p1581223517560"></a>mountPointPrefix_disk_ioUtils 和volumePrefix_disk_ioUtils</p>
 </td>
 <td class="cellrowborder" valign="top" width="16.77664467106579%" headers="mcps1.2.7.1.2 "><p id="p131241035131210"><a name="p131241035131210"></a><a name="p131241035131210"></a>（Agent）磁盘I/O使用率</p>
 </td>
@@ -126,7 +130,7 @@ SERVICE.BMS
 <td class="cellrowborder" valign="top" width="13.237352529494101%" headers="mcps1.2.7.1.6 "><p id="p7124113571213"><a name="p7124113571213"></a><a name="p7124113571213"></a>1分钟</p>
 </td>
 </tr>
-<tr id="row1312443516122"><td class="cellrowborder" valign="top" width="10.347930413917217%" headers="mcps1.2.7.1.1 "><p id="p212463521219"><a name="p212463521219"></a><a name="p212463521219"></a>disk_inodesUsedPercent</p>
+<tr id="row1312443516122"><td class="cellrowborder" valign="top" width="10.347930413917217%" headers="mcps1.2.7.1.1 "><p id="p14586144185715"><a name="p14586144185715"></a><a name="p14586144185715"></a>mountPointPrefix_disk_inodesUsedPercent</p>
 </td>
 <td class="cellrowborder" valign="top" width="16.77664467106579%" headers="mcps1.2.7.1.2 "><p id="p15124133521213"><a name="p15124133521213"></a><a name="p15124133521213"></a>（Agent）inode已使用占比</p>
 </td>
@@ -142,11 +146,11 @@ SERVICE.BMS
 <td class="cellrowborder" valign="top" width="13.237352529494101%" headers="mcps1.2.7.1.6 "><p id="p5124113511211"><a name="p5124113511211"></a><a name="p5124113511211"></a>1分钟</p>
 </td>
 </tr>
-<tr id="row171246355128"><td class="cellrowborder" valign="top" width="10.347930413917217%" headers="mcps1.2.7.1.1 "><p id="p1712403521219"><a name="p1712403521219"></a><a name="p1712403521219"></a>net_bitSent</p>
+<tr id="row171246355128"><td class="cellrowborder" valign="top" width="10.347930413917217%" headers="mcps1.2.7.1.1 "><p id="p1712403521219"><a name="p1712403521219"></a><a name="p1712403521219"></a>net_bitRecv</p>
 </td>
 <td class="cellrowborder" valign="top" width="16.77664467106579%" headers="mcps1.2.7.1.2 "><p id="p112463541217"><a name="p112463541217"></a><a name="p112463541217"></a>（Agent）入网带宽</p>
 </td>
-<td class="cellrowborder" valign="top" width="36.822635472905425%" headers="mcps1.2.7.1.3 "><p id="zh-cn_topic_0107606742_zh-cn_topic_0104704449_p99231311175211"><a name="zh-cn_topic_0107606742_zh-cn_topic_0104704449_p99231311175211"></a><a name="zh-cn_topic_0107606742_zh-cn_topic_0104704449_p99231311175211"></a>该指标用于统计测量对象网卡每秒发送的比特数。</p>
+<td class="cellrowborder" valign="top" width="36.822635472905425%" headers="mcps1.2.7.1.3 "><p id="zh-cn_topic_0107606742_zh-cn_topic_0104704449_p99231311175211"><a name="zh-cn_topic_0107606742_zh-cn_topic_0104704449_p99231311175211"></a><a name="zh-cn_topic_0107606742_zh-cn_topic_0104704449_p99231311175211"></a>该指标用于统计测量对象网卡每秒接收的比特数。</p>
 <p id="zh-cn_topic_0107606742_p9414151572118"><a name="zh-cn_topic_0107606742_p9414151572118"></a><a name="zh-cn_topic_0107606742_p9414151572118"></a>通过计算采集周期内“/proc/net/dev”文件中的变化得出。</p>
 <p id="zh-cn_topic_0107606742_p0780145612408"><a name="zh-cn_topic_0107606742_p0780145612408"></a><a name="zh-cn_topic_0107606742_p0780145612408"></a>单位：bit/s</p>
 </td>
@@ -157,11 +161,11 @@ SERVICE.BMS
 <td class="cellrowborder" valign="top" width="13.237352529494101%" headers="mcps1.2.7.1.6 "><p id="zh-cn_topic_0107606742_p118402467212"><a name="zh-cn_topic_0107606742_p118402467212"></a><a name="zh-cn_topic_0107606742_p118402467212"></a>1分钟</p>
 </td>
 </tr>
-<tr id="row1124235161214"><td class="cellrowborder" valign="top" width="10.347930413917217%" headers="mcps1.2.7.1.1 "><p id="p14124153516126"><a name="p14124153516126"></a><a name="p14124153516126"></a>net_bitRecv</p>
+<tr id="row1124235161214"><td class="cellrowborder" valign="top" width="10.347930413917217%" headers="mcps1.2.7.1.1 "><p id="p14124153516126"><a name="p14124153516126"></a><a name="p14124153516126"></a>net_bitSent</p>
 </td>
 <td class="cellrowborder" valign="top" width="16.77664467106579%" headers="mcps1.2.7.1.2 "><p id="p191248356123"><a name="p191248356123"></a><a name="p191248356123"></a>（Agent）出网带宽</p>
 </td>
-<td class="cellrowborder" valign="top" width="36.822635472905425%" headers="mcps1.2.7.1.3 "><p id="zh-cn_topic_0107606742_zh-cn_topic_0104704449_p692381185210"><a name="zh-cn_topic_0107606742_zh-cn_topic_0104704449_p692381185210"></a><a name="zh-cn_topic_0107606742_zh-cn_topic_0104704449_p692381185210"></a>该指标用于统计测量对象网卡每秒接收的比特数。</p>
+<td class="cellrowborder" valign="top" width="36.822635472905425%" headers="mcps1.2.7.1.3 "><p id="zh-cn_topic_0107606742_zh-cn_topic_0104704449_p692381185210"><a name="zh-cn_topic_0107606742_zh-cn_topic_0104704449_p692381185210"></a><a name="zh-cn_topic_0107606742_zh-cn_topic_0104704449_p692381185210"></a>该指标用于统计测量对象网卡每秒发送的比特数。</p>
 <p id="zh-cn_topic_0107606742_p109105171214"><a name="zh-cn_topic_0107606742_p109105171214"></a><a name="zh-cn_topic_0107606742_p109105171214"></a>通过计算采集周期内“/proc/net/dev”文件中的变化得出。</p>
 <p id="zh-cn_topic_0107606742_p1857448154112"><a name="zh-cn_topic_0107606742_p1857448154112"></a><a name="zh-cn_topic_0107606742_p1857448154112"></a>单位：bit/s</p>
 </td>

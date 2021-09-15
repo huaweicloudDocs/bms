@@ -4,7 +4,7 @@
 
 IB网络因其低延迟、高带宽的网络特性被用于很多高性能计算（High Performance Computing，HPC）项目，IB网络采用了100G Mellanox IB网卡，通过专用IB交换机和控制器软件UFM实现网络通信和管理。IB网络通过Partition Key实现网络隔离，不同租户的IB网络可通过不同的Partition Key来隔离，类似于以太网的VLAN。在BMS场景，IB网络支持RDMA和IPoIB通信方式。
 
-裸金属服务器IB网络的发放是通过在创建BMS时选择支持IB网络的flavor实现的，即可动态创建IB网络。IB网络发放完成后，即可在裸金属服务器上通过RDMA方式实现高速通信。在IPoIB通信模式下，需要在IB网口上配置IP地址，有静态配置和DHCP动态分配两种方式。静态配置举例如下：
+裸金属服务器IB网络的发放是通过在创建BMS时选择支持IB网络的规格实现的，即可动态创建IB网络。IB网络发放完成后，即可在裸金属服务器上通过RDMA方式实现高速通信。在IPoIB通信模式下，需要在IB网口上配置IP地址，有静态配置和DHCP动态分配两种方式。静态配置举例如下：
 
 ```
 #/etc/sysconfig/network/ifcfg-ib0
@@ -24,8 +24,10 @@ CONNECTED_MODE=yes
 NAME=ib0
 ```
 
->![](public_sys-resources/icon-note.gif) **说明：** 
->了解更多关于IPoIB通信方式的信息，请参考[https://www.kernel.org/doc/Documentation/infiniband/ipoib.txt](https://www.kernel.org/doc/Documentation/infiniband/ipoib.txt)。
+>![](public_sys-resources/icon-caution.gif) **注意：** 
+>裸金属服务器创建成功后，IB网络的IP默认采用DHCP方式获取。如果用户需要对IB网卡的默认IP重新规划，可以自行配置与裸金属服务器已有IP网段不冲突的静态IP。
+
+了解更多关于IPoIB通信方式的信息，请参考[https://www.kernel.org/doc/Documentation/infiniband/ipoib.txt](https://www.kernel.org/doc/Documentation/infiniband/ipoib.txt)。
 
 ## 查看方式<a name="section10294132575216"></a>
 

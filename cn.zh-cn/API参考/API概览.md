@@ -119,10 +119,10 @@
 </tbody>
 </table>
 
->![](public_sys-resources/icon-note.gif) **说明：**   
->-   使用BMS提供的接口时，您需要使用BMS服务自身的Endpoint。  
->-   使用OpenStack原生接口时，您需要使用ECS服务注册的Endpoint。  
->-   当前版本调用OpenStack接口不支持HTTP长连接。  
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>-   使用BMS提供的接口时，您需要使用BMS服务自身的Endpoint。
+>-   使用OpenStack原生接口时，您需要使用ECS服务注册的Endpoint。
+>-   当前版本调用OpenStack接口不支持HTTP长连接。
 
 ## BMS接口使用限制<a name="section1016613793716"></a>
 

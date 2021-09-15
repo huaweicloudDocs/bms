@@ -77,7 +77,7 @@ GET /v1/\{project\_id\}/jobs/\{job\_id\}
     </tr>
     <tr id="row17040455163851"><td class="cellrowborder" valign="top" width="22.67%" headers="mcps1.1.4.1.1 "><p id="p21767581102821"><a name="p21767581102821"></a><a name="p21767581102821"></a>entities</p>
     </td>
-    <td class="cellrowborder" valign="top" width="20.59%" headers="mcps1.1.4.1.2 "><p id="p18343614102821"><a name="p18343614102821"></a><a name="p18343614102821"></a>Array of objects</p>
+    <td class="cellrowborder" valign="top" width="20.59%" headers="mcps1.1.4.1.2 "><p id="p18343614102821"><a name="p18343614102821"></a><a name="p18343614102821"></a>Object</p>
     </td>
     <td class="cellrowborder" valign="top" width="56.74%" headers="mcps1.1.4.1.3 "><p id="p78921950203711"><a name="p78921950203711"></a><a name="p78921950203711"></a>Job操作的对象。请参见<a href="#table63816992163249">表2</a>。</p>
     <p id="p17831309102821"><a name="p17831309102821"></a><a name="p17831309102821"></a>根据不同Job类型，显示不同的内容。<span id="text1027592519399"><a name="text1027592519399"></a><a name="text1027592519399"></a>裸金属服务器</span><span id="text1968164914717"><a name="text1968164914717"></a><a name="text1968164914717"></a></span>相关操作显示server_id；网卡相关操作显示nic_id；有子Job时为子Job的详情。</p>

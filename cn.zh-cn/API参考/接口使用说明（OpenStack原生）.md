@@ -1,4 +1,4 @@
-# 接口使用说明（OpenStack原生）<a name="ZH-CN_TOPIC_0171226371"></a>
+# 接口使用说明（OpenStack原生）<a name="bms_api_0701"></a>
 
 -   网络相关服务API，请参考《[虚拟私有云API参考](https://support.huaweicloud.com/api-vpc/zh-cn_topic_0050065465.html)》。
 -   专属分布式存储相关API，请参考《[专属分布式存储API参考](https://support.huaweicloud.com/api-dss/dss_02_0001.html)》。

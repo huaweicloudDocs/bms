@@ -11,29 +11,11 @@ GPU加速型p2（physical.p2.large规格）裸金属服务器创建成功后，�
 
     **表 1**  NVIDIA GPU驱动和CUDA工具包下载
 
-    <a name="table7349118172716"></a>
-    <table><thead align="left"><tr id="row1134728172710"><th class="cellrowborder" valign="top" width="23.232323232323235%" id="mcps1.2.4.1.1"><p id="p6347889271"><a name="p6347889271"></a><a name="p6347889271"></a>操作系统</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="35.35353535353536%" id="mcps1.2.4.1.2"><p id="p43474842718"><a name="p43474842718"></a><a name="p43474842718"></a>需要下载的驱动</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="41.41414141414141%" id="mcps1.2.4.1.3"><p id="p153472820273"><a name="p153472820273"></a><a name="p153472820273"></a>下载地址</p>
-    </th>
-    </tr>
-    </thead>
-    <tbody><tr id="row1034720812277"><td class="cellrowborder" rowspan="2" valign="top" width="23.232323232323235%" headers="mcps1.2.4.1.1 "><p id="p113471884270"><a name="p113471884270"></a><a name="p113471884270"></a>Ubuntu 16.04、CentOS 7.4</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="35.35353535353536%" headers="mcps1.2.4.1.2 "><p id="p13347383279"><a name="p13347383279"></a><a name="p13347383279"></a>NVIDIA GPU驱动安装包“NVIDIA-Linux-x86_64-384.81.run”</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="41.41414141414141%" headers="mcps1.2.4.1.3 "><p id="p18347489273"><a name="p18347489273"></a><a name="p18347489273"></a><a href="https://www.nvidia.com/download/driverResults.aspx/124722/en-us" target="_blank" rel="noopener noreferrer">https://www.nvidia.com/download/driverResults.aspx/124722/en-us</a></p>
-    </td>
-    </tr>
-    <tr id="row103491815276"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p183478872720"><a name="p183478872720"></a><a name="p183478872720"></a>CUDA工具包安装包“cuda_9.0.176_384.81_linux.run”</p>
-    </td>
-    <td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="p10349208112719"><a name="p10349208112719"></a><a name="p10349208112719"></a><a href="https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/cuda_9.0.176_384.81_linux-run" target="_blank" rel="noopener noreferrer">https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/cuda_9.0.176_384.81_linux-run</a></p>
-    </td>
-    </tr>
-    </tbody>
-    </table>
+|操作系统|需要下载的驱动|下载地址|
+|--|--|--|
+|Ubuntu 16.04、CentOS 7.4|NVIDIA GPU驱动安装包“NVIDIA-Linux-x86_64-384.81.run”|https://www.nvidia.com/download/driverResults.aspx/124722/en-us|
+|CUDA工具包安装包“cuda_9.0.176_384.81_linux.run”|https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/cuda_9.0.176_384.81_linux-run|
+
 
 
 不同的操作系统，安装NVIDIA GPU驱动和CUDA工具包的操作略有不同，具体如下：

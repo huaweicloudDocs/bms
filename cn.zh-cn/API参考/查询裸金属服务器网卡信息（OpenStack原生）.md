@@ -1,4 +1,4 @@
-# 查询裸金属服务器网卡信息（OpenStack原生）<a name="ZH-CN_TOPIC_0053158678"></a>
+# 查询裸金属服务器网卡信息（OpenStack原生）<a name="bms_api_0730"></a>
 
 ## 功能介绍<a name="section36073588"></a>
 
@@ -12,33 +12,11 @@ GET /v2.1/\{project\_id\}/servers/\{server\_id\}/os-interface
 
 **表 1**  参数说明
 
-<a name="table132771041114617"></a>
-<table><thead align="left"><tr id="row8277114114465"><th class="cellrowborder" valign="top" width="24.682468246824683%" id="mcps1.2.4.1.1"><p id="p27097356"><a name="p27097356"></a><a name="p27097356"></a>参数</p>
-</th>
-<th class="cellrowborder" valign="top" width="25.24252425242524%" id="mcps1.2.4.1.2"><p id="p47402253"><a name="p47402253"></a><a name="p47402253"></a>是否必选</p>
-</th>
-<th class="cellrowborder" valign="top" width="50.07500750075008%" id="mcps1.2.4.1.3"><p id="p14377323"><a name="p14377323"></a><a name="p14377323"></a>描述</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row17277041134613"><td class="cellrowborder" valign="top" width="24.682468246824683%" headers="mcps1.2.4.1.1 "><p id="p41666396"><a name="p41666396"></a><a name="p41666396"></a>project_id</p>
-</td>
-<td class="cellrowborder" valign="top" width="25.24252425242524%" headers="mcps1.2.4.1.2 "><p id="p19534911"><a name="p19534911"></a><a name="p19534911"></a>是</p>
-</td>
-<td class="cellrowborder" valign="top" width="50.07500750075008%" headers="mcps1.2.4.1.3 "><p id="p38823967"><a name="p38823967"></a><a name="p38823967"></a>项目ID。</p>
-<p id="p652825144113"><a name="p652825144113"></a><a name="p652825144113"></a>获取方式请参见<a href="获取项目ID.md">获取项目ID</a>。</p>
-</td>
-</tr>
-<tr id="row1127715418461"><td class="cellrowborder" valign="top" width="24.682468246824683%" headers="mcps1.2.4.1.1 "><p id="p6481999114812"><a name="p6481999114812"></a><a name="p6481999114812"></a>server_id</p>
-</td>
-<td class="cellrowborder" valign="top" width="25.24252425242524%" headers="mcps1.2.4.1.2 "><p id="p55279920114812"><a name="p55279920114812"></a><a name="p55279920114812"></a>是</p>
-</td>
-<td class="cellrowborder" valign="top" width="50.07500750075008%" headers="mcps1.2.4.1.3 "><p id="p48488537114812"><a name="p48488537114812"></a><a name="p48488537114812"></a><span id="text184810181544"><a name="text184810181544"></a><a name="text184810181544"></a>裸金属服务器</span><span id="text12848418745"><a name="text12848418745"></a><a name="text12848418745"></a></span>ID。</p>
-<p id="p29791113277"><a name="p29791113277"></a><a name="p29791113277"></a>可以从<span id="zh-cn_topic_0113746489_text013014803615"><a name="zh-cn_topic_0113746489_text013014803615"></a><a name="zh-cn_topic_0113746489_text013014803615"></a>裸金属服务器</span><span id="zh-cn_topic_0113746489_text10131448133612"><a name="zh-cn_topic_0113746489_text10131448133612"></a><a name="zh-cn_topic_0113746489_text10131448133612"></a></span>控制台查询，或者通过调用<a href="查询裸金属服务器列表（OpenStack原生）.md">查询裸金属服务器列表（OpenStack原生）</a>API获取。</p>
-</td>
-</tr>
-</tbody>
-</table>
+|参数|是否必选|描述|
+|--|--|--|
+|project_id|是|项目ID。获取方式请参见获取项目ID。|
+|server_id|是|裸金属服务器ID。可以从裸金属服务器控制台查询，或者通过调用查询裸金属服务器列表（OpenStack原生）API获取。|
+
 
 ## 请求消息<a name="section36279478"></a>
 
@@ -57,101 +35,29 @@ GET /v2.1/\{project\_id\}/servers/\{server\_id\}/os-interface
 
 -   响应参数
 
-    <a name="table25276401"></a>
-    <table><thead align="left"><tr id="row30840926"><th class="cellrowborder" valign="top" width="28.799999999999997%" id="mcps1.1.4.1.1"><p id="p59978491115233"><a name="p59978491115233"></a><a name="p59978491115233"></a>参数</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="27.38%" id="mcps1.1.4.1.2"><p id="p26419641115233"><a name="p26419641115233"></a><a name="p26419641115233"></a>参数类型</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="43.82%" id="mcps1.1.4.1.3"><p id="p64181866115233"><a name="p64181866115233"></a><a name="p64181866115233"></a>描述</p>
-    </th>
-    </tr>
-    </thead>
-    <tbody><tr id="row13119252"><td class="cellrowborder" valign="top" width="28.799999999999997%" headers="mcps1.1.4.1.1 "><p id="p56026474"><a name="p56026474"></a><a name="p56026474"></a>interfaceAttachments</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="27.38%" headers="mcps1.1.4.1.2 "><p id="p34453949"><a name="p34453949"></a><a name="p34453949"></a>Array of objects</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="43.82%" headers="mcps1.1.4.1.3 "><p id="p18214233"><a name="p18214233"></a><a name="p18214233"></a><span id="text81510245413"><a name="text81510245413"></a><a name="text81510245413"></a>裸金属服务器</span><span id="text111516241643"><a name="text111516241643"></a><a name="text111516241643"></a></span>网卡信息列表。详情请参见<a href="#table49805933">表2</a>。</p>
-    </td>
-    </tr>
-    </tbody>
-    </table>
+|参数|参数类型|描述|
+|--|--|--|
+|interfaceAttachments|Array of objects|裸金属服务器网卡信息列表。详情请参见表2。|
+
 
     **表 2**  interfaceAttachments字段数据结构说明
 
-    <a name="table49805933"></a>
-    <table><thead align="left"><tr id="row9026257"><th class="cellrowborder" valign="top" width="28.799999999999997%" id="mcps1.2.4.1.1"><p id="p1725119981520"><a name="p1725119981520"></a><a name="p1725119981520"></a>参数</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="27.38%" id="mcps1.2.4.1.2"><p id="p1725215901512"><a name="p1725215901512"></a><a name="p1725215901512"></a>参数类型</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="43.82%" id="mcps1.2.4.1.3"><p id="p1325513931517"><a name="p1325513931517"></a><a name="p1325513931517"></a>描述</p>
-    </th>
-    </tr>
-    </thead>
-    <tbody><tr id="row10727144"><td class="cellrowborder" valign="top" width="28.799999999999997%" headers="mcps1.2.4.1.1 "><p id="p63592346"><a name="p63592346"></a><a name="p63592346"></a>port_state</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="27.38%" headers="mcps1.2.4.1.2 "><p id="p13579756"><a name="p13579756"></a><a name="p13579756"></a>String</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="43.82%" headers="mcps1.2.4.1.3 "><p id="p34639550"><a name="p34639550"></a><a name="p34639550"></a>网卡端口状态，取值为：<span>ACTIVE、BUILD、DOWN。</span></p>
-    </td>
-    </tr>
-    <tr id="row43320496"><td class="cellrowborder" valign="top" width="28.799999999999997%" headers="mcps1.2.4.1.1 "><p id="p19299281"><a name="p19299281"></a><a name="p19299281"></a>fixed_ips</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="27.38%" headers="mcps1.2.4.1.2 "><p id="p55265559"><a name="p55265559"></a><a name="p55265559"></a>Array of objects</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="43.82%" headers="mcps1.2.4.1.3 "><p id="p23274750"><a name="p23274750"></a><a name="p23274750"></a>网卡私网IP信息列表。详情请参见<a href="#table19750463">表3</a>。</p>
-    </td>
-    </tr>
-    <tr id="row8146160"><td class="cellrowborder" valign="top" width="28.799999999999997%" headers="mcps1.2.4.1.1 "><p id="p55859239"><a name="p55859239"></a><a name="p55859239"></a>net_id</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="27.38%" headers="mcps1.2.4.1.2 "><p id="p10966323"><a name="p10966323"></a><a name="p10966323"></a>String</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="43.82%" headers="mcps1.2.4.1.3 "><p id="p8495130"><a name="p8495130"></a><a name="p8495130"></a>网卡端口所属子网的网络ID（network_id）。</p>
-    </td>
-    </tr>
-    <tr id="row9347313"><td class="cellrowborder" valign="top" width="28.799999999999997%" headers="mcps1.2.4.1.1 "><p id="p18934887"><a name="p18934887"></a><a name="p18934887"></a>port_id</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="27.38%" headers="mcps1.2.4.1.2 "><p id="p13287175"><a name="p13287175"></a><a name="p13287175"></a>String</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="43.82%" headers="mcps1.2.4.1.3 "><p id="p22674843"><a name="p22674843"></a><a name="p22674843"></a>网卡端口ID。</p>
-    </td>
-    </tr>
-    <tr id="row2747002"><td class="cellrowborder" valign="top" width="28.799999999999997%" headers="mcps1.2.4.1.1 "><p id="p21180630"><a name="p21180630"></a><a name="p21180630"></a>mac_addr</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="27.38%" headers="mcps1.2.4.1.2 "><p id="p50770908"><a name="p50770908"></a><a name="p50770908"></a>String</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="43.82%" headers="mcps1.2.4.1.3 "><p id="p35008393"><a name="p35008393"></a><a name="p35008393"></a>网卡MAC地址信息。</p>
-    </td>
-    </tr>
-    </tbody>
-    </table>
+|参数|参数类型|描述|
+|--|--|--|
+|port_state|String|网卡端口状态，取值为：ACTIVE、BUILD、DOWN。|
+|fixed_ips|Array of objects|网卡私网IP信息列表。详情请参见表3。|
+|net_id|String|网卡端口所属子网的网络ID（network_id）。|
+|port_id|String|网卡端口ID。|
+|mac_addr|String|网卡MAC地址信息。|
+
 
     **表 3**  fixed\_ips字段数据结构说明
 
-    <a name="table19750463"></a>
-    <table><thead align="left"><tr id="row60761195"><th class="cellrowborder" valign="top" width="29.18%" id="mcps1.2.4.1.1"><p id="p1975316192155"><a name="p1975316192155"></a><a name="p1975316192155"></a>参数</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="27.589999999999996%" id="mcps1.2.4.1.2"><p id="p9754171910158"><a name="p9754171910158"></a><a name="p9754171910158"></a>参数类型</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="43.230000000000004%" id="mcps1.2.4.1.3"><p id="p17562199153"><a name="p17562199153"></a><a name="p17562199153"></a>描述</p>
-    </th>
-    </tr>
-    </thead>
-    <tbody><tr id="row61624137"><td class="cellrowborder" valign="top" width="29.18%" headers="mcps1.2.4.1.1 "><p id="p25499238"><a name="p25499238"></a><a name="p25499238"></a>subnet_id</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="27.589999999999996%" headers="mcps1.2.4.1.2 "><p id="p65213800"><a name="p65213800"></a><a name="p65213800"></a>String</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="43.230000000000004%" headers="mcps1.2.4.1.3 "><p id="p27784979"><a name="p27784979"></a><a name="p27784979"></a>网卡私网IP对应子网的子网ID（subnet_id）。</p>
-    </td>
-    </tr>
-    <tr id="row48738220"><td class="cellrowborder" valign="top" width="29.18%" headers="mcps1.2.4.1.1 "><p id="p55481787"><a name="p55481787"></a><a name="p55481787"></a>ip_address</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="27.589999999999996%" headers="mcps1.2.4.1.2 "><p id="p17532027"><a name="p17532027"></a><a name="p17532027"></a>String</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="43.230000000000004%" headers="mcps1.2.4.1.3 "><p id="p30163672"><a name="p30163672"></a><a name="p30163672"></a>网卡私网IP信息。</p>
-    </td>
-    </tr>
-    </tbody>
-    </table>
+|参数|参数类型|描述|
+|--|--|--|
+|subnet_id|String|网卡私网IP对应子网的子网ID（subnet_id）。|
+|ip_address|String|网卡私网IP信息。|
+
 
 
 -   响应样例
@@ -180,20 +86,10 @@ GET /v2.1/\{project\_id\}/servers/\{server\_id\}/os-interface
 
 正常返回值：
 
-<a name="zh-cn_topic_0106040941_table753804619176"></a>
-<table><thead align="left"><tr id="zh-cn_topic_0106040941_row10735134615172"><th class="cellrowborder" valign="top" width="42.42%" id="mcps1.1.3.1.1"><p id="zh-cn_topic_0106040941_p19735204616177"><a name="zh-cn_topic_0106040941_p19735204616177"></a><a name="zh-cn_topic_0106040941_p19735204616177"></a>返回值</p>
-</th>
-<th class="cellrowborder" valign="top" width="57.58%" id="mcps1.1.3.1.2"><p id="zh-cn_topic_0106040941_p207355465176"><a name="zh-cn_topic_0106040941_p207355465176"></a><a name="zh-cn_topic_0106040941_p207355465176"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="zh-cn_topic_0106040941_row1473514621713"><td class="cellrowborder" valign="top" width="42.42%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0106040941_p13735144611178"><a name="zh-cn_topic_0106040941_p13735144611178"></a><a name="zh-cn_topic_0106040941_p13735144611178"></a>200</p>
-</td>
-<td class="cellrowborder" valign="top" width="57.58%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0106040941_p207351246161711"><a name="zh-cn_topic_0106040941_p207351246161711"></a><a name="zh-cn_topic_0106040941_p207351246161711"></a>服务器已成功处理了请求。</p>
-</td>
-</tr>
-</tbody>
-</table>
+|返回值|说明|
+|--|--|
+|200|服务器已成功处理了请求。|
+
 
 其他返回值请参考[状态码](状态码.md)。
 

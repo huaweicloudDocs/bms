@@ -1,4 +1,4 @@
-# 查询裸金属服务器详情列表（OpenStack原生）<a name="ZH-CN_TOPIC_0053158679"></a>
+# 查询裸金属服务器详情列表（OpenStack原生）<a name="bms_api_0710"></a>
 
 ## 功能介绍<a name="section33716833"></a>
 
@@ -17,166 +17,30 @@ GET /v2.1/\{project\_id\}/servers/detail\{?changes-since=\{changes-since\}&image
 
 **表 1**  参数说明
 
-<a name="table0524112565"></a>
-<table><thead align="left"><tr id="row252211165610"><th class="cellrowborder" valign="top" width="26.25262526252625%" id="mcps1.2.4.1.1"><p id="p55073076202321"><a name="p55073076202321"></a><a name="p55073076202321"></a>参数</p>
-</th>
-<th class="cellrowborder" valign="top" width="25.58255825582558%" id="mcps1.2.4.1.2"><p id="p44659366114813"><a name="p44659366114813"></a><a name="p44659366114813"></a>是否必选</p>
-</th>
-<th class="cellrowborder" valign="top" width="48.16481648164816%" id="mcps1.2.4.1.3"><p id="p19572211"><a name="p19572211"></a><a name="p19572211"></a>描述</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1524119564"><td class="cellrowborder" valign="top" width="26.25262526252625%" headers="mcps1.2.4.1.1 "><p id="p6789122714241"><a name="p6789122714241"></a><a name="p6789122714241"></a>project_id</p>
-</td>
-<td class="cellrowborder" valign="top" width="25.58255825582558%" headers="mcps1.2.4.1.2 "><p id="p4344474"><a name="p4344474"></a><a name="p4344474"></a>是</p>
-</td>
-<td class="cellrowborder" valign="top" width="48.16481648164816%" headers="mcps1.2.4.1.3 "><p id="p16358126"><a name="p16358126"></a><a name="p16358126"></a>项目ID。</p>
-<p id="p652825144113"><a name="p652825144113"></a><a name="p652825144113"></a>获取方式请参见<a href="获取项目ID.md">获取项目ID</a>。</p>
-</td>
-</tr>
-</tbody>
-</table>
+|参数|是否必选|描述|
+|--|--|--|
+|project_id|是|项目ID。获取方式请参见获取项目ID。|
+
 
 ## 请求消息<a name="section46708959"></a>
 
 -   请求参数
 
-    <a name="table835318258318"></a>
-    <table><thead align="left"><tr id="zh-cn_topic_0053158693_row1458874235211"><th class="cellrowborder" valign="top" width="19.85%" id="mcps1.1.5.1.1"><p id="zh-cn_topic_0053158693_p59978491115233"><a name="zh-cn_topic_0053158693_p59978491115233"></a><a name="zh-cn_topic_0053158693_p59978491115233"></a>参数</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="20.39%" id="mcps1.1.5.1.2"><p id="zh-cn_topic_0053158693_p26419641115233"><a name="zh-cn_topic_0053158693_p26419641115233"></a><a name="zh-cn_topic_0053158693_p26419641115233"></a>是否必选</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="18.75%" id="mcps1.1.5.1.3"><p id="zh-cn_topic_0053158693_p59616187115233"><a name="zh-cn_topic_0053158693_p59616187115233"></a><a name="zh-cn_topic_0053158693_p59616187115233"></a>参数类型</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="41.010000000000005%" id="mcps1.1.5.1.4"><p id="zh-cn_topic_0053158693_p64181866115233"><a name="zh-cn_topic_0053158693_p64181866115233"></a><a name="zh-cn_topic_0053158693_p64181866115233"></a>描述</p>
-    </th>
-    </tr>
-    </thead>
-    <tbody><tr id="zh-cn_topic_0053158693_row686311283276"><td class="cellrowborder" valign="top" width="19.85%" headers="mcps1.1.5.1.1 "><p id="zh-cn_topic_0053158693_p10447191065310"><a name="zh-cn_topic_0053158693_p10447191065310"></a><a name="zh-cn_topic_0053158693_p10447191065310"></a>changes-since</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="20.39%" headers="mcps1.1.5.1.2 "><p id="zh-cn_topic_0053158693_p644915104533"><a name="zh-cn_topic_0053158693_p644915104533"></a><a name="zh-cn_topic_0053158693_p644915104533"></a>否</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="18.75%" headers="mcps1.1.5.1.3 "><p id="zh-cn_topic_0053158693_p13454131016536"><a name="zh-cn_topic_0053158693_p13454131016536"></a><a name="zh-cn_topic_0053158693_p13454131016536"></a>String</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="41.010000000000005%" headers="mcps1.1.5.1.4 "><p id="zh-cn_topic_0053158693_p445791014538"><a name="zh-cn_topic_0053158693_p445791014538"></a><a name="zh-cn_topic_0053158693_p445791014538"></a><span id="zh-cn_topic_0053158693_text121698161638"><a name="zh-cn_topic_0053158693_text121698161638"></a><a name="zh-cn_topic_0053158693_text121698161638"></a>裸金属服务器</span><span id="zh-cn_topic_0053158693_text216912161937"><a name="zh-cn_topic_0053158693_text216912161937"></a><a name="zh-cn_topic_0053158693_text216912161937"></a></span>上次更新状态的时间戳信息。格式为ISO 8601时间格式，例如：2013-06-09T06:42:18Z。</p>
-    </td>
-    </tr>
-    <tr id="zh-cn_topic_0053158693_row16588164215216"><td class="cellrowborder" valign="top" width="19.85%" headers="mcps1.1.5.1.1 "><p id="zh-cn_topic_0053158693_p17387161075313"><a name="zh-cn_topic_0053158693_p17387161075313"></a><a name="zh-cn_topic_0053158693_p17387161075313"></a>image</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="20.39%" headers="mcps1.1.5.1.2 "><p id="zh-cn_topic_0053158693_p123900108538"><a name="zh-cn_topic_0053158693_p123900108538"></a><a name="zh-cn_topic_0053158693_p123900108538"></a>否</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="18.75%" headers="mcps1.1.5.1.3 "><p id="zh-cn_topic_0053158693_p2393161013538"><a name="zh-cn_topic_0053158693_p2393161013538"></a><a name="zh-cn_topic_0053158693_p2393161013538"></a>String</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="41.010000000000005%" headers="mcps1.1.5.1.4 "><p id="zh-cn_topic_0053158693_p1339701010533"><a name="zh-cn_topic_0053158693_p1339701010533"></a><a name="zh-cn_topic_0053158693_p1339701010533"></a>镜像ID。</p>
-    <p id="zh-cn_topic_0053158693_p1870622242917"><a name="zh-cn_topic_0053158693_p1870622242917"></a><a name="zh-cn_topic_0053158693_p1870622242917"></a>可以在镜像服务控制台查询，也可以调用“<a href="https://support.huaweicloud.com/api-ims/ims_03_0602.html" target="_blank" rel="noopener noreferrer">查询镜像列表</a>”API获取。</p>
-    <div class="note" id="zh-cn_topic_0053158693_note623794911339"><a name="zh-cn_topic_0053158693_note623794911339"></a><a name="zh-cn_topic_0053158693_note623794911339"></a><span class="notetitle"> 说明： </span><div class="notebody"><p id="zh-cn_topic_0053158693_p17237114943316"><a name="zh-cn_topic_0053158693_p17237114943316"></a><a name="zh-cn_topic_0053158693_p17237114943316"></a>在使用image作为条件过滤时，不能同时支持其他过滤条件和分页条件。如果同时指定image及其他条件，则以image条件为准；当条件不含image时，接口功能不受限制。</p>
-    </div></div>
-    </td>
-    </tr>
-    <tr id="zh-cn_topic_0053158693_row05881842195216"><td class="cellrowborder" valign="top" width="19.85%" headers="mcps1.1.5.1.1 "><p id="zh-cn_topic_0053158693_p839991012531"><a name="zh-cn_topic_0053158693_p839991012531"></a><a name="zh-cn_topic_0053158693_p839991012531"></a>flavor</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="20.39%" headers="mcps1.1.5.1.2 "><p id="zh-cn_topic_0053158693_p12402210155311"><a name="zh-cn_topic_0053158693_p12402210155311"></a><a name="zh-cn_topic_0053158693_p12402210155311"></a>否</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="18.75%" headers="mcps1.1.5.1.3 "><p id="zh-cn_topic_0053158693_p15406610135318"><a name="zh-cn_topic_0053158693_p15406610135318"></a><a name="zh-cn_topic_0053158693_p15406610135318"></a>String</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="41.010000000000005%" headers="mcps1.1.5.1.4 "><p id="zh-cn_topic_0053158693_p1040881015311"><a name="zh-cn_topic_0053158693_p1040881015311"></a><a name="zh-cn_topic_0053158693_p1040881015311"></a>规格ID。</p>
-    <p id="zh-cn_topic_0053158693_p7741128113511"><a name="zh-cn_topic_0053158693_p7741128113511"></a><a name="zh-cn_topic_0053158693_p7741128113511"></a>可以在<span id="zh-cn_topic_0053158693_text9235625735"><a name="zh-cn_topic_0053158693_text9235625735"></a><a name="zh-cn_topic_0053158693_text9235625735"></a>裸金属服务器</span><span id="zh-cn_topic_0053158693_text32351725734"><a name="zh-cn_topic_0053158693_text32351725734"></a><a name="zh-cn_topic_0053158693_text32351725734"></a></span>控制台查询，也可以调用<a href="查询裸金属服务器规格信息列表（OpenStack原生）.md">查询裸金属服务器规格信息列表（OpenStack原生）</a>API获取。</p>
-    </td>
-    </tr>
-    <tr id="zh-cn_topic_0053158693_row058811420527"><td class="cellrowborder" valign="top" width="19.85%" headers="mcps1.1.5.1.1 "><p id="zh-cn_topic_0053158693_p5413201085313"><a name="zh-cn_topic_0053158693_p5413201085313"></a><a name="zh-cn_topic_0053158693_p5413201085313"></a>name</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="20.39%" headers="mcps1.1.5.1.2 "><p id="zh-cn_topic_0053158693_p1941781012535"><a name="zh-cn_topic_0053158693_p1941781012535"></a><a name="zh-cn_topic_0053158693_p1941781012535"></a>否</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="18.75%" headers="mcps1.1.5.1.3 "><p id="zh-cn_topic_0053158693_p3422121055318"><a name="zh-cn_topic_0053158693_p3422121055318"></a><a name="zh-cn_topic_0053158693_p3422121055318"></a>String</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="41.010000000000005%" headers="mcps1.1.5.1.4 "><p id="zh-cn_topic_0053158693_p842631015536"><a name="zh-cn_topic_0053158693_p842631015536"></a><a name="zh-cn_topic_0053158693_p842631015536"></a><span id="zh-cn_topic_0053158693_text13209132811312"><a name="zh-cn_topic_0053158693_text13209132811312"></a><a name="zh-cn_topic_0053158693_text13209132811312"></a>裸金属服务器</span><span id="zh-cn_topic_0053158693_text920922816319"><a name="zh-cn_topic_0053158693_text920922816319"></a><a name="zh-cn_topic_0053158693_text920922816319"></a></span>名称，使用模糊匹配的方式查询。</p>
-    <p id="zh-cn_topic_0053158693_p7429181015313"><a name="zh-cn_topic_0053158693_p7429181015313"></a><a name="zh-cn_topic_0053158693_p7429181015313"></a>例如，“?name=bob”正则表达式会同时返回bob和bobb。如果必须仅匹配bob，则可以使用与基础数据库服务器的语法相匹配的正则表达式，如MySQL或PostgreSQL（官方网站：<a href="https://www.postgresql.org/docs/9.2/static/functions-matching.html" target="_blank" rel="noopener noreferrer">https://www.postgresql.org/docs/9.2/static/functions-matching.html</a>）。</p>
-    </td>
-    </tr>
-    <tr id="zh-cn_topic_0053158693_row105881642195217"><td class="cellrowborder" valign="top" width="19.85%" headers="mcps1.1.5.1.1 "><p id="zh-cn_topic_0053158693_p1743421075315"><a name="zh-cn_topic_0053158693_p1743421075315"></a><a name="zh-cn_topic_0053158693_p1743421075315"></a>status</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="20.39%" headers="mcps1.1.5.1.2 "><p id="zh-cn_topic_0053158693_p843711020539"><a name="zh-cn_topic_0053158693_p843711020539"></a><a name="zh-cn_topic_0053158693_p843711020539"></a>否</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="18.75%" headers="mcps1.1.5.1.3 "><p id="zh-cn_topic_0053158693_p11440101010537"><a name="zh-cn_topic_0053158693_p11440101010537"></a><a name="zh-cn_topic_0053158693_p11440101010537"></a>String</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="41.010000000000005%" headers="mcps1.1.5.1.4 "><p id="zh-cn_topic_0053158693_p7441161020531"><a name="zh-cn_topic_0053158693_p7441161020531"></a><a name="zh-cn_topic_0053158693_p7441161020531"></a><span id="zh-cn_topic_0053158693_text4817131535"><a name="zh-cn_topic_0053158693_text4817131535"></a><a name="zh-cn_topic_0053158693_text4817131535"></a>裸金属服务器</span><span id="zh-cn_topic_0053158693_text1781773117312"><a name="zh-cn_topic_0053158693_text1781773117312"></a><a name="zh-cn_topic_0053158693_text1781773117312"></a></span>状态。</p>
-    <p id="zh-cn_topic_0053158693_p117067951617"><a name="zh-cn_topic_0053158693_p117067951617"></a><a name="zh-cn_topic_0053158693_p117067951617"></a>取值范围：</p>
-    <a name="zh-cn_topic_0053158693_ul29109448426"></a><a name="zh-cn_topic_0053158693_ul29109448426"></a><ul id="zh-cn_topic_0053158693_ul29109448426"><li>ACTIVE：运行中/正在关机/删除中</li><li>BUILD：创建中</li><li>ERROR：故障</li><li>HARD_REBOOT：强制重启中</li><li>REBOOT：重启中</li><li>DELETED：实例已被正常删除</li><li>SHUTOFF：关机/正在开机/删除中/重建中/重装操作系统中/重装操作系统失败/冻结</li></ul>
-    </td>
-    </tr>
-    <tr id="zh-cn_topic_0053158693_row16588142145219"><td class="cellrowborder" valign="top" width="19.85%" headers="mcps1.1.5.1.1 "><p id="zh-cn_topic_0053158693_p1445843114279"><a name="zh-cn_topic_0053158693_p1445843114279"></a><a name="zh-cn_topic_0053158693_p1445843114279"></a>limit</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="20.39%" headers="mcps1.1.5.1.2 "><p id="zh-cn_topic_0053158693_p15457103122713"><a name="zh-cn_topic_0053158693_p15457103122713"></a><a name="zh-cn_topic_0053158693_p15457103122713"></a>否</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="18.75%" headers="mcps1.1.5.1.3 "><p id="zh-cn_topic_0053158693_p15455113112714"><a name="zh-cn_topic_0053158693_p15455113112714"></a><a name="zh-cn_topic_0053158693_p15455113112714"></a>Integer</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="41.010000000000005%" headers="mcps1.1.5.1.4 "><p id="zh-cn_topic_0053158693_p345110316275"><a name="zh-cn_topic_0053158693_p345110316275"></a><a name="zh-cn_topic_0053158693_p345110316275"></a>每页返回<span id="zh-cn_topic_0053158693_text59831335739"><a name="zh-cn_topic_0053158693_text59831335739"></a><a name="zh-cn_topic_0053158693_text59831335739"></a>裸金属服务器</span><span id="zh-cn_topic_0053158693_text1098373515319"><a name="zh-cn_topic_0053158693_text1098373515319"></a><a name="zh-cn_topic_0053158693_text1098373515319"></a></span>的条数。</p>
-    </td>
-    </tr>
-    <tr id="zh-cn_topic_0053158693_row12307152919453"><td class="cellrowborder" valign="top" width="19.85%" headers="mcps1.1.5.1.1 "><p id="zh-cn_topic_0053158693_p34602410233"><a name="zh-cn_topic_0053158693_p34602410233"></a><a name="zh-cn_topic_0053158693_p34602410233"></a>marker</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="20.39%" headers="mcps1.1.5.1.2 "><p id="zh-cn_topic_0053158693_p1946094112310"><a name="zh-cn_topic_0053158693_p1946094112310"></a><a name="zh-cn_topic_0053158693_p1946094112310"></a>否</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="18.75%" headers="mcps1.1.5.1.3 "><p id="zh-cn_topic_0053158693_p14460249231"><a name="zh-cn_topic_0053158693_p14460249231"></a><a name="zh-cn_topic_0053158693_p14460249231"></a>String</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="41.010000000000005%" headers="mcps1.1.5.1.4 "><p id="zh-cn_topic_0053158693_p174601046239"><a name="zh-cn_topic_0053158693_p174601046239"></a><a name="zh-cn_topic_0053158693_p174601046239"></a>从marker指定的<span id="zh-cn_topic_0053158693_text71323381731"><a name="zh-cn_topic_0053158693_text71323381731"></a><a name="zh-cn_topic_0053158693_text71323381731"></a>裸金属服务器</span><span id="zh-cn_topic_0053158693_text613212389311"><a name="zh-cn_topic_0053158693_text613212389311"></a><a name="zh-cn_topic_0053158693_text613212389311"></a></span>ID的下一条数据开始查询。</p>
-    </td>
-    </tr>
-    <tr id="zh-cn_topic_0053158693_row14320610478"><td class="cellrowborder" valign="top" width="19.85%" headers="mcps1.1.5.1.1 "><p id="zh-cn_topic_0053158693_p5324615479"><a name="zh-cn_topic_0053158693_p5324615479"></a><a name="zh-cn_topic_0053158693_p5324615479"></a>tags</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="20.39%" headers="mcps1.1.5.1.2 "><p id="zh-cn_topic_0053158693_p143218664715"><a name="zh-cn_topic_0053158693_p143218664715"></a><a name="zh-cn_topic_0053158693_p143218664715"></a>否</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="18.75%" headers="mcps1.1.5.1.3 "><p id="zh-cn_topic_0053158693_p143211619479"><a name="zh-cn_topic_0053158693_p143211619479"></a><a name="zh-cn_topic_0053158693_p143211619479"></a>String</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="41.010000000000005%" headers="mcps1.1.5.1.4 "><p id="zh-cn_topic_0053158693_p123246194714"><a name="zh-cn_topic_0053158693_p123246194714"></a><a name="zh-cn_topic_0053158693_p123246194714"></a>查询tag字段中包含该值的<span id="zh-cn_topic_0053158693_text142391140333"><a name="zh-cn_topic_0053158693_text142391140333"></a><a name="zh-cn_topic_0053158693_text142391140333"></a>裸金属服务器</span><span id="zh-cn_topic_0053158693_text162393401630"><a name="zh-cn_topic_0053158693_text162393401630"></a><a name="zh-cn_topic_0053158693_text162393401630"></a></span>。</p>
-    <p id="zh-cn_topic_0053158693_p12820165216471"><a name="zh-cn_topic_0053158693_p12820165216471"></a><a name="zh-cn_topic_0053158693_p12820165216471"></a>微版本2.26新增</p>
-    </td>
-    </tr>
-    <tr id="zh-cn_topic_0053158693_row1658884211523"><td class="cellrowborder" valign="top" width="19.85%" headers="mcps1.1.5.1.1 "><p id="zh-cn_topic_0053158693_p203418324539"><a name="zh-cn_topic_0053158693_p203418324539"></a><a name="zh-cn_topic_0053158693_p203418324539"></a>not-tags</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="20.39%" headers="mcps1.1.5.1.2 "><p id="zh-cn_topic_0053158693_p173673215532"><a name="zh-cn_topic_0053158693_p173673215532"></a><a name="zh-cn_topic_0053158693_p173673215532"></a>否</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="18.75%" headers="mcps1.1.5.1.3 "><p id="zh-cn_topic_0053158693_p238132105317"><a name="zh-cn_topic_0053158693_p238132105317"></a><a name="zh-cn_topic_0053158693_p238132105317"></a>String</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="41.010000000000005%" headers="mcps1.1.5.1.4 "><p id="zh-cn_topic_0053158693_p154313328536"><a name="zh-cn_topic_0053158693_p154313328536"></a><a name="zh-cn_topic_0053158693_p154313328536"></a>查询tag字段中不包含该值的<span id="zh-cn_topic_0053158693_text179892421232"><a name="zh-cn_topic_0053158693_text179892421232"></a><a name="zh-cn_topic_0053158693_text179892421232"></a>裸金属服务器</span><span id="zh-cn_topic_0053158693_text149891342231"><a name="zh-cn_topic_0053158693_text149891342231"></a><a name="zh-cn_topic_0053158693_text149891342231"></a></span>，值为标签的Key。</p>
-    <div class="note" id="zh-cn_topic_0053158693_note124521913175616"><a name="zh-cn_topic_0053158693_note124521913175616"></a><a name="zh-cn_topic_0053158693_note124521913175616"></a><span class="notetitle"> 说明： </span><div class="notebody"><p id="zh-cn_topic_0053158693_p1745221311560"><a name="zh-cn_topic_0053158693_p1745221311560"></a><a name="zh-cn_topic_0053158693_p1745221311560"></a>如果之前添加的Tag为“Key.Value”的形式，则查询的时候需要使用“Key”来查询。</p>
-    <p id="zh-cn_topic_0053158693_p213418685710"><a name="zh-cn_topic_0053158693_p213418685710"></a><a name="zh-cn_topic_0053158693_p213418685710"></a>例如：之前添加的tag为“a.b”,则升级后，查询时需使用“not-tags=a”。</p>
-    </div></div>
-    <p id="zh-cn_topic_0053158693_p19441232135317"><a name="zh-cn_topic_0053158693_p19441232135317"></a><a name="zh-cn_topic_0053158693_p19441232135317"></a>微版本2.26新增</p>
-    </td>
-    </tr>
-    <tr id="zh-cn_topic_0053158693_row1158812424528"><td class="cellrowborder" valign="top" width="19.85%" headers="mcps1.1.5.1.1 "><p id="zh-cn_topic_0053158693_p184717323539"><a name="zh-cn_topic_0053158693_p184717323539"></a><a name="zh-cn_topic_0053158693_p184717323539"></a>reservation_id</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="20.39%" headers="mcps1.1.5.1.2 "><p id="zh-cn_topic_0053158693_p1650832195311"><a name="zh-cn_topic_0053158693_p1650832195311"></a><a name="zh-cn_topic_0053158693_p1650832195311"></a>否</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="18.75%" headers="mcps1.1.5.1.3 "><p id="zh-cn_topic_0053158693_p1453143220535"><a name="zh-cn_topic_0053158693_p1453143220535"></a><a name="zh-cn_topic_0053158693_p1453143220535"></a>String</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="41.010000000000005%" headers="mcps1.1.5.1.4 "><p id="zh-cn_topic_0053158693_p5551832185311"><a name="zh-cn_topic_0053158693_p5551832185311"></a><a name="zh-cn_topic_0053158693_p5551832185311"></a>批量创建<span id="zh-cn_topic_0053158693_text63205019314"><a name="zh-cn_topic_0053158693_text63205019314"></a><a name="zh-cn_topic_0053158693_text63205019314"></a>裸金属服务器</span><span id="zh-cn_topic_0053158693_text734501833"><a name="zh-cn_topic_0053158693_text734501833"></a><a name="zh-cn_topic_0053158693_text734501833"></a></span>时，指定该预留ID，可以查询同批次创建的<span id="zh-cn_topic_0053158693_text281110523312"><a name="zh-cn_topic_0053158693_text281110523312"></a><a name="zh-cn_topic_0053158693_text281110523312"></a>裸金属服务器</span><span id="zh-cn_topic_0053158693_text281195211313"><a name="zh-cn_topic_0053158693_text281195211313"></a><a name="zh-cn_topic_0053158693_text281195211313"></a></span>。</p>
-    <p id="zh-cn_topic_0053158693_p45753218534"><a name="zh-cn_topic_0053158693_p45753218534"></a><a name="zh-cn_topic_0053158693_p45753218534"></a>微版本2.26新增</p>
-    </td>
-    </tr>
-    <tr id="zh-cn_topic_0053158693_row1758864217526"><td class="cellrowborder" valign="top" width="19.85%" headers="mcps1.1.5.1.1 "><p id="zh-cn_topic_0053158693_p10633321531"><a name="zh-cn_topic_0053158693_p10633321531"></a><a name="zh-cn_topic_0053158693_p10633321531"></a>sort_key</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="20.39%" headers="mcps1.1.5.1.2 "><p id="zh-cn_topic_0053158693_p106613212531"><a name="zh-cn_topic_0053158693_p106613212531"></a><a name="zh-cn_topic_0053158693_p106613212531"></a>否</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="18.75%" headers="mcps1.1.5.1.3 "><p id="zh-cn_topic_0053158693_p196963275311"><a name="zh-cn_topic_0053158693_p196963275311"></a><a name="zh-cn_topic_0053158693_p196963275311"></a>String</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="41.010000000000005%" headers="mcps1.1.5.1.4 "><p id="zh-cn_topic_0053158693_p167133212536"><a name="zh-cn_topic_0053158693_p167133212536"></a><a name="zh-cn_topic_0053158693_p167133212536"></a>用于排序的属性，包括uuid（<span id="zh-cn_topic_0053158693_text62627567316"><a name="zh-cn_topic_0053158693_text62627567316"></a><a name="zh-cn_topic_0053158693_text62627567316"></a>裸金属服务器</span><span id="zh-cn_topic_0053158693_text1726217563313"><a name="zh-cn_topic_0053158693_text1726217563313"></a><a name="zh-cn_topic_0053158693_text1726217563313"></a></span>的uuid）、vm_state（<span id="zh-cn_topic_0053158693_text142381559638"><a name="zh-cn_topic_0053158693_text142381559638"></a><a name="zh-cn_topic_0053158693_text142381559638"></a>裸金属服务器</span><span id="zh-cn_topic_0053158693_text22392599316"><a name="zh-cn_topic_0053158693_text22392599316"></a><a name="zh-cn_topic_0053158693_text22392599316"></a></span>的状态）、display_name（<span id="zh-cn_topic_0053158693_text135136112411"><a name="zh-cn_topic_0053158693_text135136112411"></a><a name="zh-cn_topic_0053158693_text135136112411"></a>裸金属服务器</span><span id="zh-cn_topic_0053158693_text6513116415"><a name="zh-cn_topic_0053158693_text6513116415"></a><a name="zh-cn_topic_0053158693_text6513116415"></a></span>名称）、task_state（<span id="zh-cn_topic_0053158693_text1810916516416"><a name="zh-cn_topic_0053158693_text1810916516416"></a><a name="zh-cn_topic_0053158693_text1810916516416"></a>裸金属服务器</span><span id="zh-cn_topic_0053158693_text17109175241"><a name="zh-cn_topic_0053158693_text17109175241"></a><a name="zh-cn_topic_0053158693_text17109175241"></a></span>任务状态）、power_state（电源状态）、created_at（创建时间）、updated_at（更新时间）、availability_zone（可用区）。可以指定多对sort_key和sort_dir。</p>
-    <p id="zh-cn_topic_0053158693_p1321581482211"><a name="zh-cn_topic_0053158693_p1321581482211"></a><a name="zh-cn_topic_0053158693_p1321581482211"></a>默认排序顺序为created_at逆序。</p>
-    </td>
-    </tr>
-    <tr id="zh-cn_topic_0053158693_row135891242165217"><td class="cellrowborder" valign="top" width="19.85%" headers="mcps1.1.5.1.1 "><p id="zh-cn_topic_0053158693_p1327414444539"><a name="zh-cn_topic_0053158693_p1327414444539"></a><a name="zh-cn_topic_0053158693_p1327414444539"></a>sort_dir</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="20.39%" headers="mcps1.1.5.1.2 "><p id="zh-cn_topic_0053158693_p16275104445317"><a name="zh-cn_topic_0053158693_p16275104445317"></a><a name="zh-cn_topic_0053158693_p16275104445317"></a>否</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="18.75%" headers="mcps1.1.5.1.3 "><p id="zh-cn_topic_0053158693_p202804443536"><a name="zh-cn_topic_0053158693_p202804443536"></a><a name="zh-cn_topic_0053158693_p202804443536"></a>String</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="41.010000000000005%" headers="mcps1.1.5.1.4 "><p id="zh-cn_topic_0053158693_p15283154425314"><a name="zh-cn_topic_0053158693_p15283154425314"></a><a name="zh-cn_topic_0053158693_p15283154425314"></a>排序方向。</p>
-    <a name="zh-cn_topic_0053158693_ul22858441530"></a><a name="zh-cn_topic_0053158693_ul22858441530"></a><ul id="zh-cn_topic_0053158693_ul22858441530"><li>asc：升序</li><li>desc：降序（默认值）</li></ul>
-    </td>
-    </tr>
-    </tbody>
-    </table>
+|参数|是否必选|参数类型|描述|
+|--|--|--|--|
+|changes-since|否|String|裸金属服务器上次更新状态的时间戳信息。格式为ISO 8601时间格式，例如：2013-06-09T06:42:18Z。|
+|image|否|String|镜像ID。可以在镜像服务控制台查询，也可以调用“查询镜像列表”API获取。在使用image作为条件过滤时，不能同时支持其他过滤条件和分页条件。如果同时指定image及其他条件，则以image条件为准；当条件不含image时，接口功能不受限制。|
+|flavor|否|String|规格ID。可以在裸金属服务器控制台查询，也可以调用查询裸金属服务器规格信息列表（OpenStack原生）API获取。|
+|name|否|String|裸金属服务器名称，使用模糊匹配的方式查询。例如，“?name=bob”正则表达式会同时返回bob和bobb。如果必须仅匹配bob，则可以使用与基础数据库服务器的语法相匹配的正则表达式，如MySQL或PostgreSQL（官方网站：https://www.postgresql.org/docs/9.2/static/functions-matching.html）。|
+|status|否|String|裸金属服务器状态。取值范围：ACTIVE：运行中/正在关机/删除中BUILD：创建中ERROR：故障HARD_REBOOT：强制重启中REBOOT：重启中DELETED：实例已被正常删除SHUTOFF：关机/正在开机/删除中/重建中/重装操作系统中/重装操作系统失败/冻结|
+|limit|否|Integer|每页返回裸金属服务器的条数。|
+|marker|否|String|从marker指定的裸金属服务器ID的下一条数据开始查询。|
+|tags|否|String|查询tag字段中包含该值的裸金属服务器。微版本2.26新增|
+|not-tags|否|String|查询tag字段中不包含该值的裸金属服务器，值为标签的Key。如果之前添加的Tag为“Key.Value”的形式，则查询的时候需要使用“Key”来查询。例如：之前添加的tag为“a.b”,则升级后，查询时需使用“not-tags=a”。微版本2.26新增|
+|reservation_id|否|String|批量创建裸金属服务器时，指定该预留ID，可以查询同批次创建的裸金属服务器。微版本2.26新增|
+|sort_key|否|String|用于排序的属性，包括uuid（裸金属服务器的uuid）、vm_state（裸金属服务器的状态）、display_name（裸金属服务器名称）、task_state（裸金属服务器任务状态）、power_state（电源状态）、created_at（创建时间）、updated_at（更新时间）、availability_zone（可用区）。可以指定多对sort_key和sort_dir。默认排序顺序为created_at逆序。|
+|sort_dir|否|String|排序方向。asc：升序desc：降序（默认值）|
+
 
 -   请求样例
     -   不带可选参数
@@ -203,24 +67,135 @@ GET /v2.1/\{project\_id\}/servers/detail\{?changes-since=\{changes-since\}&image
 
 -   响应参数
 
-    <a name="table61256692"></a>
-    <table><thead align="left"><tr id="row16697504"><th class="cellrowborder" valign="top" width="17.86%" id="mcps1.1.4.1.1"><p id="p59978491115233"><a name="p59978491115233"></a><a name="p59978491115233"></a>参数</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="32.97%" id="mcps1.1.4.1.2"><p id="p26419641115233"><a name="p26419641115233"></a><a name="p26419641115233"></a>参数类型</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="49.17%" id="mcps1.1.4.1.3"><p id="p64181866115233"><a name="p64181866115233"></a><a name="p64181866115233"></a>描述</p>
-    </th>
-    </tr>
-    </thead>
-    <tbody><tr id="row64050727"><td class="cellrowborder" valign="top" width="17.86%" headers="mcps1.1.4.1.1 "><p id="p20726409"><a name="p20726409"></a><a name="p20726409"></a>servers</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="32.97%" headers="mcps1.1.4.1.2 "><p id="p491044173818"><a name="p491044173818"></a><a name="p491044173818"></a>Array of objects</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="49.17%" headers="mcps1.1.4.1.3 "><p id="p24702645"><a name="p24702645"></a><a name="p24702645"></a><span id="text56791793514"><a name="text56791793514"></a><a name="text56791793514"></a>裸金属服务器</span><span id="text06791091752"><a name="text06791091752"></a><a name="text06791091752"></a></span>信息列表详情。内容参见<a href="查询裸金属服务器详情（OpenStack原生）.md#table6149040">表2</a>。</p>
-    </td>
-    </tr>
-    </tbody>
-    </table>
+|参数|参数类型|描述|
+|--|--|--|
+|servers|Array of objects|裸金属服务器信息列表详情。内容参见表2。|
+
+
+    **表 2**  server字段数据结构说明
+
+|参数|参数类型|描述|
+|--|--|--|
+|name|String|裸金属服务器名称。|
+|id|String|裸金属服务器唯一标识ID。|
+|status|String|裸金属服务器当前状态信息。取值范围：ACTIVE：运行中/正在关机/删除中BUILD：创建中ERROR：故障HARD_REBOOT：强制重启中REBOOT：重启中SHUTOFF：关机/正在开机/删除中/重建中/重装操作系统中/重装操作系统失败/冻结|
+|created|String|裸金属服务器创建时间。时间戳格式为ISO 8601：YYYY-MM-DDTHH:MM:SSZ，例如：2019-05-22T03:30:52Z|
+|updated|String|裸金属服务器上一次更新时间。时间戳格式为ISO 8601：YYYY-MM-DDTHH:MM:SSZ，例如：2019-05-22T04:30:52Z|
+|flavor|Object|裸金属服务器规格信息。详情请参见表3。|
+|image|Object|裸金属服务器镜像信息。详情请参见表4。|
+|tenant_id|String|裸金属服务器所属租户ID，UUID格式。该参数和project_id表示相同的概念。|
+|key_name|String|SSH密钥名称。|
+|user_id|String|裸金属服务器所属用户ID。|
+|metadata|Map<String,String>|裸金属服务器元数据。用户自定义metadata键值对。键、值长度均不大于255字节。|
+|hostId|String|裸金属服务器对应的主机ID。|
+|addresses|Map<String,Array of address objects>|裸金属服务器对应的网络地址信息。裸金属服务器所属网络信息。key：表示裸金属服务器使用的虚拟私有云的ID。value：网络详细信息。|
+|security_groups|Array of objects|裸金属服务器所属安全组列表。详情请参见表7。|
+|links|Array of objects|裸金属服务器相关快捷链接信息。详情请参见表5。|
+|OS-DCF:diskConfig|String|扩展属性，磁盘配置方式，取值为以下两种：MANUAL：API使用镜像中的分区方案和文件系统创建裸金属服务器。如果目标flavor磁盘较大，则API不会对剩余磁盘空间进行分区。AUTO：API使用与目标flavor磁盘大小相同的单个分区创建裸金属服务器，API会自动调整文件系统以适应整个分区。|
+|OS-EXT-AZ:availability_zone|String|扩展属性，裸金属服务器所在可用区名称。|
+|OS-EXT-SRV-ATTR:host|String|扩展属性，裸金属服务器宿主机名称。|
+|OS-EXT-SRV-ATTR:hypervisor_hostname|String|扩展属性，hypervisor主机名称，由Nova virt驱动提供。|
+|OS-EXT-SRV-ATTR:instance_name|String|扩展属性，裸金属服务器别名。|
+|OS-EXT-STS:power_state|Integer|扩展属性，裸金属服务器电源状态。取值范围：0，1，2，3，40：pending1：running2：paused3：shutdown4：crashed|
+|OS-EXT-STS:task_state|String|扩展属性，裸金属服务器当前的任务状态。取值范围：rebooting：重启中reboot_started：普通重启reboot_started_hard：强制重启powering-off：关机中powering-on：开机中rebuilding：重建中scheduling：调度中deleting：删除中|
+|OS-EXT-STS:vm_state|String|扩展属性，裸金属服务器的稳定状态。取值范围：active：运行中shutoff：关机suspended：暂停reboot：重启|
+|OS-SRV-USG:launched_at|String|扩展属性，裸金属服务器启动时间。时间戳格式为ISO 8601，例如：2019-05-22T03:23:59.000000|
+|OS-SRV-USG:terminated_at|String|扩展属性，裸金属服务器删除时间。时间戳格式为ISO 8601，例如：2019-05-22T04:23:59.000000|
+|os-extended-volumes:volumes_attached|Array of objects|裸金属服务器挂载的云磁盘信息。详情请参见表8。|
+|accessIPv4|String|预留属性。|
+|accessIPv6|String|预留属性。|
+|fault|Object|故障原因，如果裸金属服务器为故障状态，则返回该字段。详情请参见表9。|
+|config_drive|String|预留属性。|
+|progress|Integer|预留属性。|
+|description|String|描述信息。微版本2.19新增|
+|host_status|String|裸金属服务器宿主机状态。UP：服务正常UNKNOWN：状态未知DOWN：服务异常MAINTENANCE：维护状态空字符串：裸金属服务器无主机信息微版本2.16新增|
+|OS-EXT-SRV-ATTR:hostname|String|裸金属服务器的主机名。微版本2.3新增|
+|OS-EXT-SRV-ATTR:reservation_id|String|批量创建场景，裸金属服务器的预留id。微版本2.3新增|
+|OS-EXT-SRV-ATTR:launch_index|Integer|批量创建场景，裸金属服务器的启动顺序。微版本2.3新增|
+|OS-EXT-SRV-ATTR:kernel_id|String|若使用AMI格式的镜像，则表示kernel image的UUID；否则，留空。微版本2.3新增|
+|OS-EXT-SRV-ATTR:ramdisk_id|String|若使用AMI格式镜像，则表示ramdisk image的UUID；否则，留空。微版本2.3新增|
+|OS-EXT-SRV-ATTR:root_device_name|String|裸金属服务器系统盘的设备名称，例如“/dev/sda”。微版本2.3新增|
+|OS-EXT-SRV-ATTR:user_data|String|创建裸金属服务器时指定的user_data，取值为base64编码的结果或空字符串。|
+|locked|Boolean|裸金属服务器实例是否为锁定状态。true：锁定false：未锁定微版本2.9新增|
+|tags|Array of strings|裸金属服务器标签列表。微版本2.26新增，如果不使用微版本查询，响应中无tags字段。tag值遵循如下规则：key与value使用“=”连接，如“key=value”。如果value为空字符串，则仅返回key。|
+|sys_tags|Array of objects|裸金属服务器系统标签。详情请参见表3。|
+|enterprise_project_id|String|企业项目ID。|
+|os:scheduler_hints|Object|裸金属服务器调度信息。详情请参见表4。|
+
+
+    **表 3**  sys\_tags字段数据结构说明
+
+|参数|参数类型|描述|
+|--|--|--|
+|key|String|系统标签的Key值。|
+|value|String|系统标签的value值。|
+
+
+    **表 4**  os:scheduler\_hints字段数据结构说明（响应参数）
+
+|参数|参数类型|描述|
+|--|--|--|
+|group|Array of strings|云服务器组ID，UUID格式。|
+
+
+    **表 5**  flavor字段数据结构说明
+
+|参数|参数类型|描述|
+|--|--|--|
+|id|String|裸金属服务器类型ID。|
+|links|Array of objects|裸金属服务器类型相关快捷链接信息。详情请参见表5。|
+
+
+    **表 6**  image字段数据结构说明
+
+|参数|参数类型|描述|
+|--|--|--|
+|id|String|裸金属服务器镜像ID。|
+|links|Array of objects|裸金属服务器镜像相关快捷链接信息。详情请参见表5。|
+
+
+    **表 7**  links字段数据结构说明
+
+|参数|参数类型|描述|
+|--|--|--|
+|rel|String|快捷链接标记名称。取值为：self：包含版本号的资源链接，需要立即跟踪时使用此类链接。bookmark：提供了适合长期存储的资源链接。|
+|href|String|对应快捷链接。|
+
+
+    **表 8**  address字段数据结构说明
+
+|参数|参数类型|描述|
+|--|--|--|
+|addr|String|IP地址信息。|
+|version|Integer|IP地址类型，值为4或6。4：IP地址类型是IPv46：IP地址类型是IPv6|
+|OS-EXT-IPS-MAC:mac_addr|String|扩展属性，MAC地址。|
+|OS-EXT-IPS:type|String|扩展属性，IP地址类型。fixed：代表私有IP地址。floating：代表弹性IP地址。|
+
+
+    **表 9**  security\_groups字段数据结构说明
+
+|参数|参数类型|描述|
+|--|--|--|
+|name|String|创建裸金属服务器时未指定安全组，该值为default。创建裸金属服务器时指定了安全组，该值为安全组名称。|
+
+
+    **表 10**  os-extended-volumes:volumes\_attached字段数据结构说明
+
+|参数|参数类型|描述|
+|--|--|--|
+|id|String|云磁盘ID。|
+|delete_on_termination|Boolean|删除裸金属服务器时是否一并删除该卷。true：是false：否微版本2.3新增|
+
+
+    **表 11**  fault字段数据结构说明
+
+|参数|参数类型|描述|
+|--|--|--|
+|message|String|故障信息。|
+|code|Integer|故障code。|
+|details|String|故障详情。|
+|created|String|故障时间，ISO 8601格式。|
+
 
 
 -   响应样例
@@ -322,20 +297,10 @@ GET /v2.1/\{project\_id\}/servers/detail\{?changes-since=\{changes-since\}&image
 
 正常返回值：
 
-<a name="zh-cn_topic_0106040941_table753804619176"></a>
-<table><thead align="left"><tr id="zh-cn_topic_0106040941_row10735134615172"><th class="cellrowborder" valign="top" width="42.42%" id="mcps1.1.3.1.1"><p id="zh-cn_topic_0106040941_p19735204616177"><a name="zh-cn_topic_0106040941_p19735204616177"></a><a name="zh-cn_topic_0106040941_p19735204616177"></a>返回值</p>
-</th>
-<th class="cellrowborder" valign="top" width="57.58%" id="mcps1.1.3.1.2"><p id="zh-cn_topic_0106040941_p207355465176"><a name="zh-cn_topic_0106040941_p207355465176"></a><a name="zh-cn_topic_0106040941_p207355465176"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="zh-cn_topic_0106040941_row1473514621713"><td class="cellrowborder" valign="top" width="42.42%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0106040941_p13735144611178"><a name="zh-cn_topic_0106040941_p13735144611178"></a><a name="zh-cn_topic_0106040941_p13735144611178"></a>200</p>
-</td>
-<td class="cellrowborder" valign="top" width="57.58%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0106040941_p207351246161711"><a name="zh-cn_topic_0106040941_p207351246161711"></a><a name="zh-cn_topic_0106040941_p207351246161711"></a>服务器已成功处理了请求。</p>
-</td>
-</tr>
-</tbody>
-</table>
+|返回值|说明|
+|--|--|
+|200|服务器已成功处理了请求。|
+
 
 其他返回值请参考[状态码](状态码.md)。
 

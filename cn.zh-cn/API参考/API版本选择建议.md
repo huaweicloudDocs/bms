@@ -1,4 +1,4 @@
-# API版本选择建议<a name="ZH-CN_TOPIC_0171181964"></a>
+# API版本选择建议<a name="bms_api_0106"></a>
 
 当前BMS服务对外开放2类风格的API：
 

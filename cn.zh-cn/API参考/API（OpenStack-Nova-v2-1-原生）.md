@@ -1,4 +1,4 @@
-# API（OpenStack Nova v2.1 原生）<a name="ZH-CN_TOPIC_0171226370"></a>
+# API（OpenStack Nova v2.1 原生）<a name="bms_api_0700"></a>
 
 -   **[接口使用说明（OpenStack原生）](接口使用说明（OpenStack原生）.md)**  
 

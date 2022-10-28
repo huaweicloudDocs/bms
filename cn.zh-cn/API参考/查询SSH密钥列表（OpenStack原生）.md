@@ -1,4 +1,4 @@
-# 查询SSH密钥列表（OpenStack原生）<a name="ZH-CN_TOPIC_0060384658"></a>
+# 查询SSH密钥列表（OpenStack原生）<a name="bms_api_0738"></a>
 
 ## 功能介绍<a name="section17769131"></a>
 
@@ -16,25 +16,10 @@ GET /v2.1/\{project\_id\}/os-keypairs
 
 **表 1**  参数说明
 
-<a name="table875418115417"></a>
-<table><thead align="left"><tr id="row20751518135416"><th class="cellrowborder" valign="top" width="24.122412241224122%" id="mcps1.2.4.1.1"><p id="p67050730103718"><a name="p67050730103718"></a><a name="p67050730103718"></a>参数</p>
-</th>
-<th class="cellrowborder" valign="top" width="24.952495249524954%" id="mcps1.2.4.1.2"><p id="p62400032103718"><a name="p62400032103718"></a><a name="p62400032103718"></a>是否必选</p>
-</th>
-<th class="cellrowborder" valign="top" width="50.92509250925092%" id="mcps1.2.4.1.3"><p id="p21237868103718"><a name="p21237868103718"></a><a name="p21237868103718"></a>描述</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row675161812542"><td class="cellrowborder" valign="top" width="24.122412241224122%" headers="mcps1.2.4.1.1 "><p id="p23650911103718"><a name="p23650911103718"></a><a name="p23650911103718"></a>project_id</p>
-</td>
-<td class="cellrowborder" valign="top" width="24.952495249524954%" headers="mcps1.2.4.1.2 "><p id="p36675672103718"><a name="p36675672103718"></a><a name="p36675672103718"></a>是</p>
-</td>
-<td class="cellrowborder" valign="top" width="50.92509250925092%" headers="mcps1.2.4.1.3 "><p id="p17939461103718"><a name="p17939461103718"></a><a name="p17939461103718"></a>项目ID。</p>
-<p id="p652825144113"><a name="p652825144113"></a><a name="p652825144113"></a>获取方式请参见<a href="获取项目ID.md">获取项目ID</a>。</p>
-</td>
-</tr>
-</tbody>
-</table>
+|参数|是否必选|描述|
+|--|--|--|
+|project_id|是|项目ID。获取方式请参见获取项目ID。|
+
 
 ## 请求消息<a name="section43810255103718"></a>
 
@@ -53,88 +38,27 @@ GET /v2.1/\{project\_id\}/os-keypairs
 
 -   响应参数
 
-    <a name="table27586210103718"></a>
-    <table><thead align="left"><tr id="row41984926103718"><th class="cellrowborder" valign="top" width="22.48224822482248%" id="mcps1.1.4.1.1"><p id="p19987085"><a name="p19987085"></a><a name="p19987085"></a>参数</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="28.722872287228725%" id="mcps1.1.4.1.2"><p id="p4546697"><a name="p4546697"></a><a name="p4546697"></a>参数类型</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="48.7948794879488%" id="mcps1.1.4.1.3"><p id="p32738149"><a name="p32738149"></a><a name="p32738149"></a>描述</p>
-    </th>
-    </tr>
-    </thead>
-    <tbody><tr id="row30149674103718"><td class="cellrowborder" valign="top" width="22.48224822482248%" headers="mcps1.1.4.1.1 "><p id="p26204567103718"><a name="p26204567103718"></a><a name="p26204567103718"></a>keypairs</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="28.722872287228725%" headers="mcps1.1.4.1.2 "><p id="p42195172103718"><a name="p42195172103718"></a><a name="p42195172103718"></a>Array of objects</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="48.7948794879488%" headers="mcps1.1.4.1.3 "><p id="p62365753103718"><a name="p62365753103718"></a><a name="p62365753103718"></a>密钥信息列表，详情请参见<a href="#table31933500103718">表2</a>。</p>
-    </td>
-    </tr>
-    </tbody>
-    </table>
+|参数|参数类型|描述|
+|--|--|--|
+|keypairs|Array of objects|密钥信息列表，详情请参见表2。|
+
 
     **表 2**  keypairs字段数据结构说明
 
-    <a name="table31933500103718"></a>
-    <table><thead align="left"><tr id="row13327014103718"><th class="cellrowborder" valign="top" width="22.509999999999998%" id="mcps1.2.4.1.1"><p id="p898483610238"><a name="p898483610238"></a><a name="p898483610238"></a>参数</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="28.77%" id="mcps1.2.4.1.2"><p id="p398620365236"><a name="p398620365236"></a><a name="p398620365236"></a>参数类型</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="48.72%" id="mcps1.2.4.1.3"><p id="p69881436202319"><a name="p69881436202319"></a><a name="p69881436202319"></a>描述</p>
-    </th>
-    </tr>
-    </thead>
-    <tbody><tr id="row65555086103718"><td class="cellrowborder" valign="top" width="22.509999999999998%" headers="mcps1.2.4.1.1 "><p id="p8361735103718"><a name="p8361735103718"></a><a name="p8361735103718"></a>keypair</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="28.77%" headers="mcps1.2.4.1.2 "><p id="p6211933103718"><a name="p6211933103718"></a><a name="p6211933103718"></a>Object</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="48.72%" headers="mcps1.2.4.1.3 "><p id="p33404535103718"><a name="p33404535103718"></a><a name="p33404535103718"></a>密钥信息详情，详情请参见<a href="#table58497453103718">表3</a>。</p>
-    </td>
-    </tr>
-    </tbody>
-    </table>
+|参数|参数类型|描述|
+|--|--|--|
+|keypair|Object|密钥信息详情，详情请参见表3。|
+
 
     **表 3**  keypair字段数据结构说明
 
-    <a name="table58497453103718"></a>
-    <table><thead align="left"><tr id="row32349076103718"><th class="cellrowborder" valign="top" width="22.830000000000002%" id="mcps1.2.4.1.1"><p id="p97199488231"><a name="p97199488231"></a><a name="p97199488231"></a>参数</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="28.89%" id="mcps1.2.4.1.2"><p id="p20720548142312"><a name="p20720548142312"></a><a name="p20720548142312"></a>参数类型</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="48.28%" id="mcps1.2.4.1.3"><p id="p14724548132319"><a name="p14724548132319"></a><a name="p14724548132319"></a>描述</p>
-    </th>
-    </tr>
-    </thead>
-    <tbody><tr id="row45087230103718"><td class="cellrowborder" valign="top" width="22.830000000000002%" headers="mcps1.2.4.1.1 "><p id="p28187038103718"><a name="p28187038103718"></a><a name="p28187038103718"></a>fingerprint</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="28.89%" headers="mcps1.2.4.1.2 "><p id="p1448759103718"><a name="p1448759103718"></a><a name="p1448759103718"></a>String</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="48.28%" headers="mcps1.2.4.1.3 "><p id="p50240624103718"><a name="p50240624103718"></a><a name="p50240624103718"></a>密钥对应指纹信息。</p>
-    </td>
-    </tr>
-    <tr id="row49512432103718"><td class="cellrowborder" valign="top" width="22.830000000000002%" headers="mcps1.2.4.1.1 "><p id="p51084028103718"><a name="p51084028103718"></a><a name="p51084028103718"></a>name</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="28.89%" headers="mcps1.2.4.1.2 "><p id="p44165629103718"><a name="p44165629103718"></a><a name="p44165629103718"></a>String</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="48.28%" headers="mcps1.2.4.1.3 "><p id="p20646235103718"><a name="p20646235103718"></a><a name="p20646235103718"></a>密钥名称。</p>
-    </td>
-    </tr>
-    <tr id="row5652164133420"><td class="cellrowborder" valign="top" width="22.830000000000002%" headers="mcps1.2.4.1.1 "><p id="p565314113349"><a name="p565314113349"></a><a name="p565314113349"></a>type</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="28.89%" headers="mcps1.2.4.1.2 "><p id="p865354117348"><a name="p865354117348"></a><a name="p865354117348"></a>String</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="48.28%" headers="mcps1.2.4.1.3 "><p id="p765344153418"><a name="p765344153418"></a><a name="p765344153418"></a>密钥类型，默认为“ssh”。</p>
-    <p id="p2049715618353"><a name="p2049715618353"></a><a name="p2049715618353"></a>微版本2.2以上支持。</p>
-    </td>
-    </tr>
-    <tr id="row51598392103718"><td class="cellrowborder" valign="top" width="22.830000000000002%" headers="mcps1.2.4.1.1 "><p id="p18720236103718"><a name="p18720236103718"></a><a name="p18720236103718"></a>public_key</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="28.89%" headers="mcps1.2.4.1.2 "><p id="p39944111103718"><a name="p39944111103718"></a><a name="p39944111103718"></a>String</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="48.28%" headers="mcps1.2.4.1.3 "><p id="p14247596103718"><a name="p14247596103718"></a><a name="p14247596103718"></a>密钥对应publicKey信息。</p>
-    </td>
-    </tr>
-    </tbody>
-    </table>
+|参数|参数类型|描述|
+|--|--|--|
+|fingerprint|String|密钥对应指纹信息。|
+|name|String|密钥名称。|
+|type|String|密钥类型，默认为“ssh”。微版本2.2以上支持。|
+|public_key|String|密钥对应publicKey信息。|
+
 
 
 -   响应样例
@@ -159,20 +83,10 @@ GET /v2.1/\{project\_id\}/os-keypairs
 
 正常返回值：
 
-<a name="zh-cn_topic_0106040941_table753804619176"></a>
-<table><thead align="left"><tr id="zh-cn_topic_0106040941_row10735134615172"><th class="cellrowborder" valign="top" width="42.42%" id="mcps1.1.3.1.1"><p id="zh-cn_topic_0106040941_p19735204616177"><a name="zh-cn_topic_0106040941_p19735204616177"></a><a name="zh-cn_topic_0106040941_p19735204616177"></a>返回值</p>
-</th>
-<th class="cellrowborder" valign="top" width="57.58%" id="mcps1.1.3.1.2"><p id="zh-cn_topic_0106040941_p207355465176"><a name="zh-cn_topic_0106040941_p207355465176"></a><a name="zh-cn_topic_0106040941_p207355465176"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="zh-cn_topic_0106040941_row1473514621713"><td class="cellrowborder" valign="top" width="42.42%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0106040941_p13735144611178"><a name="zh-cn_topic_0106040941_p13735144611178"></a><a name="zh-cn_topic_0106040941_p13735144611178"></a>200</p>
-</td>
-<td class="cellrowborder" valign="top" width="57.58%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0106040941_p207351246161711"><a name="zh-cn_topic_0106040941_p207351246161711"></a><a name="zh-cn_topic_0106040941_p207351246161711"></a>服务器已成功处理了请求。</p>
-</td>
-</tr>
-</tbody>
-</table>
+|返回值|说明|
+|--|--|
+|200|服务器已成功处理了请求。|
+
 
 其他返回值请参考[状态码](状态码.md)。
 

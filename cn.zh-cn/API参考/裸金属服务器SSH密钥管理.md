@@ -1,4 +1,4 @@
-# 裸金属服务器SSH密钥管理<a name="ZH-CN_TOPIC_0060384657"></a>
+# 裸金属服务器SSH密钥管理<a name="bms_api_0737"></a>
 
 -   **[查询SSH密钥列表（OpenStack原生）](查询SSH密钥列表（OpenStack原生）.md)**  
 

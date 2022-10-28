@@ -1,4 +1,4 @@
-# 查询API版本信息<a name="ZH-CN_TOPIC_0132973615"></a>
+# 查询API版本信息<a name="bms_api_0602"></a>
 
 -   **[查询API版本信息列表](查询API版本信息列表.md)**  
 

@@ -1,4 +1,4 @@
-# 获取帐号ID<a name="ZH-CN_TOPIC_0171277625"></a>
+# 获取帐号ID<a name="bms_api_appendix_04"></a>
 
 在调用接口的时候，部分URL中需要填入帐号ID（domain\_id），所以需要先在管理控制台上获取到帐号ID。帐号ID获取步骤如下：
 
